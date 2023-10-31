@@ -539,7 +539,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clothesToPool: []
-  slideTextToPool: []
+  slideTextToPool:
+  - amountToPool: 5
+    objectToPool: {fileID: 5965662044040928813, guid: 818c362bc01b09a4a83feca3d7408314, type: 3}
+    shouldExpand: 1
   pooledObjectHolder: {fileID: 4191595482468417982}
 --- !u!114 &4501121737099002743
 MonoBehaviour:

@@ -11,9 +11,12 @@ public class ClothBase : MonoBehaviour
     protected float paintDuration;
     protected float moneyValue;
 
+    private ObjectPooler pooler;
+
     protected void Init()
     {
         SetProperties();
+        pooler = ObjectPooler.Instance;
     }
 
     protected void DeInit()
@@ -26,14 +29,12 @@ public class ClothBase : MonoBehaviour
 
     }
 
-    /*protected void PlayDamageText(float hitAmount)
+    protected void PlayMoneyText()
     {
-        if (hitAmount <= 0) return;
-        var text = ObjectPooler.Instance.GetPooledCloth();
-        text.transform.position = transform.position;
-        text.GetComponent<MoneyText>().SetTheText((int)hitAmount);
-        text.SetActive(true);
-    }*/
+        var text = ObjectPooler.Instance.GetPooledText();
+        text.gameObject.SetActive(true);
+        text.SetTheText(moneyValue, Color.green, null, transform.position + Vector3.back);
+    }
 
     private void SetProperties()
     {

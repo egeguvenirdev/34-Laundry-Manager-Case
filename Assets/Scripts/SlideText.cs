@@ -13,17 +13,12 @@ public class SlideText : MonoBehaviour
 
     private ObjectPooler pooler;
 
-    private void Start()
-    {
-        pooler = ObjectPooler.Instance;
-    }
-
     public void Init()
     {
         pooler = ObjectPooler.Instance;
     }
 
-    public void SetTheText(int value, Color color, Transform parentObj, Vector3 pos)
+    public void SetTheText(float value, Color color, Transform parentObj, Vector3 pos)
     {
         text.text = "+" + value + " $";
 
