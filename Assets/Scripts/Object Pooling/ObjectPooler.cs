@@ -5,75 +5,54 @@ using System.Linq;
 
 public class ObjectPooler : MonoSingleton<ObjectPooler>
 {
-    [SerializeField] private List<ObjectPooledItem> itemsToPool;
-    [SerializeField] private List<ObjectPooledItem> enemyiesToPool;
+    [Header("Item Types")]
+    [SerializeField] private List<ObjectPooledItem> clothesToPool;
+
+    [Header("Holder")]
     [SerializeField] private GameObject pooledObjectHolder;
 
-    private List<GameObject> pooledObjects;
-    private List<GameObject> pooledEnemies;
+    private List<ClothBase> pooledClothes;
 
     private void Awake()
     {
-        pooledObjects = new List<GameObject>();
-        foreach (ObjectPooledItem item in itemsToPool)
+        //produce the items
+        pooledClothes = new List<ClothBase>();
+        foreach (ObjectPooledItem item in clothesToPool)
         {
             for (int i = 0; i < item.amountToPool; i++)
             {
                 GameObject obj = (GameObject)Instantiate(item.objectToPool);
                 obj.transform.SetParent(pooledObjectHolder.transform);
                 obj.SetActive(false);
-                pooledObjects.Add(obj);
+                pooledClothes.Add(obj.GetComponent<ClothBase>());
             }
         }
-    }
-    public GameObject GetPooledObjectWithTag(string tag)
-    {
-        for (int i = pooledObjects.Count - 1; i > -1; i--)
-        {
-            if (!pooledObjects[i].activeInHierarchy && pooledObjects[i].tag == tag)
-            {
-                return pooledObjects[i];
-            }
-        }
-        //pooledObjects.First(o => o.activeInHierarchy && o.tag == tag);
-        foreach (ObjectPooledItem item in itemsToPool)
-        {
-            if (item.objectToPool.tag == tag)
-            {
-                if (item.shouldExpand)
-                {
-                    GameObject obj = (GameObject)Instantiate(item.objectToPool);
-                    obj.SetActive(false);
-                    pooledObjects.Add(obj);
-                    obj.transform.SetParent(pooledObjectHolder.transform);
-                    return obj;
-                }
-            }
-        }
-        return null;
     }
 
-    public GameObject GetPooledEnemy(ClothType enemyType)
+    public ClothBase GetPooledCloth(ClothType clothesType)
     {
-        for (int i = pooledEnemies.Count - 1; i > -1; i--)
+        //search for the target item
+        for (int i = pooledClothes.Count - 1; i > -1; i--)
         {
-            if (!pooledEnemies[i].activeInHierarchy && pooledEnemies[i].GetComponent<ClothBase>().clothType == enemyType)
+            if (!pooledClothes[i].gameObject.activeInHierarchy && pooledClothes[i].clothType == clothesType)
             {
-                return pooledEnemies[i];
+                return pooledClothes[i];
             }
         }
-        //pooledObjects.First(o => o.activeInHierarchy && o.tag == tag);
-        foreach (ObjectPooledItem item in enemyiesToPool)
+
+        //if tthe pool not enough and can expand
+        foreach (ObjectPooledItem item in clothesToPool)
         {
-            if (item.objectToPool.GetComponent<ClothBase>().clothType == enemyType)
+            if (item.objectToPool.GetComponent<ClothBase>().clothType == clothesType)
             {
                 if (item.shouldExpand)
                 {
                     GameObject obj = (GameObject)Instantiate(item.objectToPool);
-                    obj.SetActive(false);
-                    pooledEnemies.Add(obj);
                     obj.transform.SetParent(pooledObjectHolder.transform);
-                    return obj;
+                    obj.SetActive(false);
+                    ClothBase producedCloth = obj.GetComponent<ClothBase>();
+                    pooledClothes.Add(producedCloth);
+                    return producedCloth;
                 }
             }
         }
