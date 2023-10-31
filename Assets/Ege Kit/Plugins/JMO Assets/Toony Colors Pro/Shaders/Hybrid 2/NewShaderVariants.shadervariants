@@ -1,0 +1,1443 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!200 &20000000
+ShaderVariantCollection:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: NewShaderVariants
+  m_Shaders:
+  - first: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: 
+        passType: 6
+      - keywords: 
+        passType: 7
+      - keywords: 
+        passType: 10
+      - keywords: 
+        passType: 11
+  - first: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 66, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+  - first: {fileID: 6, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 1
+      - keywords: 
+        passType: 2
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+  - first: {fileID: 106, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: _SUNDISK_SIMPLE
+        passType: 0
+  - first: {fileID: 9000, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9001, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9002, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9003, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9004, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9007, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9101, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9103, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 9c442dc870b456e48b615cd8add0e9ef, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 493b79ea9c9be44ed8b702014d3ac49c, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 196d2d39a8955dd44a7ef555be756692, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 44f8736e1f857f24681cbc354a147c3e, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 43ed279757cf2ba4c9c277fff3220421, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 10
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 0d949f33aae55df4d92d64ec31581556, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 82c42a0b06f4f684db1ee2c535fb985c, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL _SHADOWMIXMODE_MULTIPLY
+        passType: 4
+      - keywords: POINT _SHADOWMIXMODE_MULTIPLY
+        passType: 5
+      - keywords: SHADOWS_DEPTH UNITY_PASS_SHADOWCASTER _SHADOWMIXMODE_MULTIPLY
+        passType: 8
+      - keywords: _SHADOWMIXMODE_MULTIPLY
+        passType: 11
+  - first: {fileID: 4800000, guid: 952471cc7e81a214fbe1eade4ae7c649, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 645cb8076a0c9a54bad68f9896f992ea, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: c15834894887d4c4b935cfe9df6f1c89, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH UNITY_PASS_SHADOWCASTER
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: e5691787f973b2c4c9e7333c45119dd2, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 21b28f3ee4b3c13408ed85c229008f40, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 4
+  - first: {fileID: 4800000, guid: 83e4eb1c16a47f44e898b0393a5322e8, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH UNITY_PASS_SHADOWCASTER
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 93b39336c7407ba4cb17a6d77dfa9605, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: 
+        passType: 6
+      - keywords: 
+        passType: 7
+      - keywords: 
+        passType: 10
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 960aca9aa5d48ad4b8b522dbbab26d8a, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: f54b8ae4d72e16445b407e4ad5ad4264, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: ad7325dd3fb876645bde2dd9d0691993, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH UNITY_PASS_SHADOWCASTER
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: f67990759854d1e4aa64a3821734dcd8, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 1e3b057af24249748ff873be7fafee47, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: cf81c85f95fe47e1a27f6ae460cf182c, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: d6cfefff9d9d02e42b5025108bd0e269, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 10
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: c55a8fe4b61dcfb41a8aaa1869b89fed, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 31b8f52d70379eb439f5a4ca78a1413b, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: bc1ede39bf3643ee8e493720e4259791, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 94ce8b5eaff70434a81eaa413e7b6bbb, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: 
+        passType: 10
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: a02a7d8c237544f1962732b55a9aebf1, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: dd89cf5b9246416f84610a006f916af7, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: f7ada0af4f174f0694ca6a487b8f543d, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+  - first: {fileID: 4800000, guid: 48bb5f55d8670e349b6e614913f9d910, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 14eb328de4b8eb245bb7cea29e4ac00b, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 75131f2c79eb5ea41ad169e65629e780, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH UNITY_PASS_SHADOWCASTER
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 07e5069cdf9ee934f8d7b768c461452c, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: c8d12adcee749c344b8117cf7c7eb912, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 128e987d567d4e2c824d754223b3f3b0, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 2e883a990b855be4eb85a58f732c8ea7, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH UNITY_PASS_SHADOWCASTER
+        passType: 8
+      - keywords: 
+        passType: 10
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 85187c2149c549c5b33f0cdb02836b17, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+  - first: {fileID: 4800000, guid: c17132b1f77d20942aa75f8429c0f8bc, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: d6dae50ee9e1bfa4db75f19f99355220, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 0f854b35a0cf61a429bd5dcfea30eddd, type: 3}
+    second:
+      variants:
+      - keywords: _MAIN_LIGHT_SHADOWS
+        passType: 0
+  - first: {fileID: 4800000, guid: 04c410c9937594faa893a11dceb85f7e, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 65df88701913c224d95fc554db28381a, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: ec9fec698a3456d4fb18cf8bacb7a2bc, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: e7857e9d0c934dc4f83f270f8447b006, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 8
+      - keywords: 
+        passType: 11
+      - keywords: 
+        passType: 13
+      - keywords: FOG_LINEAR _ADDITIONAL_LIGHTS _ADDITIONAL_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS
+        passType: 13
+      - keywords: FOG_LINEAR _ADDITIONAL_LIGHTS _MAIN_LIGHT_SHADOWS
+        passType: 13
+  - first: {fileID: 4800000, guid: e39bd598ce13f44ba8af997d3e42cd18, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 13
+  - first: {fileID: 4800000, guid: 60e10855641b4d84da68ec72e6f6eeb8, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: e8b802ac01d87144b91f12f40c1f2659, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 0406db5a14f94604a8c57ccfbc9f3b46, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: 
+        passType: 13
+  - first: {fileID: 4800000, guid: e260cfa7296ee7642b167f1eb5be5023, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 13
+  - first: {fileID: 4800000, guid: 8d2bb70cbf9db8d4da26e15b26e74248, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 8
+      - keywords: 
+        passType: 11
+      - keywords: 
+        passType: 13
+  - first: {fileID: 4800000, guid: 13c02b14c4d048fa9653293d54f6e0e1, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 13
+  - first: {fileID: 4800000, guid: 4431b1f1f743fbf4eb310a967890cbea, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: d5a307c014552314b9f560906d708772, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 1121bb4e615ca3c48b214e79e841e823, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 63eaba0ebfb82cc43bde059b4a8c65f6, type: 3}
+    second:
+      variants:
+      - keywords: _SMAA_PRESET_LOW
+        passType: 0
+  - first: {fileID: 4800000, guid: 5e7134d6e63e0bc47a1dd2669cedb379, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 2aed67ad60045d54ba3a00c91e2d2631, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 1edcd131364091c46a17cbff0b1de97a, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: a15b78cf8ca26ca4fb2090293153c62c, type: 3}
+    second:
+      variants:
+      - keywords: _GENERIC
+        passType: 0
+  - first: {fileID: 4800000, guid: 5f1864addb451f54bae8c86d230f736e, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 6cda457ac28612740adb23da5d39ea92, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: e8ee25143a34b8c4388709ea947055d1, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 562b7ae4f629f144aa97780546fce7c6, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: c49e63ed1bbcb334780a3bd19dfed403, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: f6783ab646d374f94b199774402a5144, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: 
+        passType: 11
+      - keywords: 
+        passType: 13
+  - first: {fileID: 4800000, guid: e507fdfead5ca47e8b9a768b51c291a1, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: 
+        passType: 13
+  - first: {fileID: 4800000, guid: 29868e73b638e48ca99a19ea58c48d90, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: 
+        passType: 13
+  - first: {fileID: 4800000, guid: 0f4122b9a743b744abe2fb6a0a88868b, type: 3}
+    second:
+      variants:
+      - keywords: GEOM_TYPE_BRANCH
+        passType: 8
+      - keywords: GEOM_TYPE_BRANCH LOD_FADE_PERCENTAGE
+        passType: 8
+      - keywords: GEOM_TYPE_BRANCH
+        passType: 13
+      - keywords: GEOM_TYPE_BRANCH LOD_FADE_PERCENTAGE
+        passType: 13
+  - first: {fileID: 4800000, guid: 99134b1f0c27d54469a840832a28fadf, type: 3}
+    second:
+      variants:
+      - keywords: LOD_FADE_PERCENTAGE _WINDQUALITY_NONE
+        passType: 8
+      - keywords: _WINDQUALITY_NONE
+        passType: 8
+      - keywords: LOD_FADE_PERCENTAGE _WINDQUALITY_NONE
+        passType: 13
+      - keywords: _WINDQUALITY_NONE
+        passType: 13
+  - first: {fileID: 4800000, guid: cf852408f2e174538bcd9b7fda1c5ae7, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 13
+  - first: {fileID: 4800000, guid: e9155b26e1bc55942a41e518703fe304, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: FOG_LINEAR _FOG
+        passType: 0
+      - keywords: _CLEAR_STENCIL_PARTIAL
+        passType: 0
+      - keywords: _DEFERRED_STENCIL _DIRECTIONAL _LIT
+        passType: 0
+      - keywords: _DEFERRED_STENCIL _DIRECTIONAL _SIMPLELIT
+        passType: 0
+      - keywords: _DEFERRED_STENCIL _LIT _POINT
+        passType: 0
+      - keywords: _DEFERRED_STENCIL _POINT _SIMPLELIT
+        passType: 0
+      - keywords: _DIRECTIONAL
+        passType: 0
+      - keywords: _POINT
+        passType: 0
+      - keywords: _SSAO_ONLY
+        passType: 0
+  - first: {fileID: 4800000, guid: e6e9a19c3678ded42a3bc431ebef7dbd, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 5fd9a8feb75a4b5894c241777f519d4e, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 93446b5c5339d4f00b85c159e1159b7c, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: d104b2fc1ca6445babb8e90b0758136b, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: c56b7e0d4c7cb484e959caeeedae9bbf, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 7b3ede40266cd49a395def176e1bc486, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 12
+  - first: {fileID: 4800000, guid: a16365e8c873daa4c94919438490b905, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 0d0f817524897904ba47a6a1d55e7668, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 4386e57b23a56004c93e1d57d2bbcb4f, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 95e15a77195eb574ab82aaac18b1c796, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 0ca6dca7396eb48e5849247ffd444914, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 11
+      - keywords: 
+        passType: 13
+  - first: {fileID: 4800000, guid: 7e60080c8cd24a2468cb08b4bfee5606, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 50b406436c6214c49aaaa6011b71dde8, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: f056d8bd2a1c7e44e9729144b4c70395, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: _DBUFFER_MRT1
+        passType: 0
+  - first: {fileID: 4800000, guid: 8516d7a69675844a7a0b7095af7c46af, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 13
+  - first: {fileID: 4800000, guid: 8fbe92a9edfe6074e841d6dd1509bc59, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 5caf62d8bd7c44596ace77ef9eb8ea31, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: e35a31e1679aeff489e202f5cc4853d5, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: b7839dad95683814aa64166edc107ae2, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 13
+  - first: {fileID: 4800000, guid: 77cfa04f893eb8745b6a454a3d51b43c, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: ce09d4a80b88c5a4eb9768fab4f1ee00, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 0849e84e3d62649e8882e9d6f056a017, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: _RECONSTRUCT_NORMAL_LOW _SOURCE_DEPTH
+        passType: 0
+      - keywords: _SOURCE_DEPTH
+        passType: 0
+  - first: {fileID: 4800000, guid: 44fc62292b65ab04eabcf310e799ccf6, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 5ec81c81908db34429b4f6ddecadd3bd, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 8
+      - keywords: 
+        passType: 13
+  - first: {fileID: 4800000, guid: d79e1c784eaf80c4585c0be7391f757a, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: c8b6a681c7b4e2e4785ffab093907f9e, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: da07703fcc09f8d4799221050659bd55, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 0a7e590f3cf1d4ee8a8fab5b6eff09ef, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 13
+  - first: {fileID: 4800000, guid: ee7e4c9a5f6364b688a332c67fc32cca, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 8
+      - keywords: 
+        passType: 11
+      - keywords: 
+        passType: 13
+  - first: {fileID: 4800000, guid: c7d04ca57e5449d49ad9cee1c604bc26, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: de02b375720b5c445afe83cd483bedf3, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 650dd9526735d5b46b79224bc6e94025, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: 
+        passType: 11
+      - keywords: 
+        passType: 13
+  - first: {fileID: 4800000, guid: 19dfbb09098c9584a83c956fbd6c5d79, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 13
+  - first: {fileID: 4800000, guid: 2df96b66b5510f94b98df2ac6f926ef4, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 77774d9009bb81447b048c907d4c6273, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: fc601e3ac6915d74884173e395ad4d6c, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 5a711a01011934ebcb58ef5ad52159d6, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 39863a74ba34d9a47a33d8789651486d, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 77301915a8e11d64e9c9078eee018be5, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 4
+      - keywords: DIRECTIONAL
+        passType: 4
+  - first: {fileID: 4800000, guid: 83ad50680030fc84c94a33a93a3a6f0c, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: TCP2_NONE
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: c51388fd201615c4ba0761fd04d184f0, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: f8e47db22fa222a419a8190c0d9cac31, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: b7c970a370a5f4041adb0953b37bb7ff, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+  - first: {fileID: 4800000, guid: 92a98ae8ab837074ab7e4a0db4ebcf16, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+  - first: {fileID: -6465566751694194690, guid: edd7abf643fa4bc4e8561d4c280c97cf, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 8
+      - keywords: 
+        passType: 11
+      - keywords: 
+        passType: 13
+      - keywords: FOG_LINEAR TCP2_MATCAP TCP2_REFLECTIONS_FRESNEL TCP2_RIM_LIGHTING
+          TCP2_RIM_LIGHTING_LIGHTMASK TCP2_SHADOW_LIGHT_COLOR TCP2_SPECULAR_STYLIZED
+          _ADDITIONAL_LIGHTS _ADDITIONAL_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS _RECEIVE_SHADOWS_OFF
+        passType: 13
+      - keywords: FOG_LINEAR TCP2_MATCAP TCP2_REFLECTIONS_FRESNEL TCP2_RIM_LIGHTING
+          TCP2_RIM_LIGHTING_LIGHTMASK _ADDITIONAL_LIGHTS _MAIN_LIGHT_SHADOWS _RECEIVE_SHADOWS_OFF
+        passType: 13
+      - keywords: FOG_LINEAR TCP2_REFLECTIONS_FRESNEL TCP2_RIM_LIGHTING_LIGHTMASK
+          TCP2_SHADOW_LIGHT_COLOR TCP2_SPECULAR_STYLIZED _ADDITIONAL_LIGHTS _ADDITIONAL_LIGHT_SHADOWS
+          _MAIN_LIGHT_SHADOWS
+        passType: 13
+      - keywords: FOG_LINEAR TCP2_REFLECTIONS_FRESNEL TCP2_RIM_LIGHTING_LIGHTMASK
+          TCP2_SHADOW_LIGHT_COLOR TCP2_SPECULAR_STYLIZED _ADDITIONAL_LIGHTS _ADDITIONAL_LIGHT_SHADOWS
+          _MAIN_LIGHT_SHADOWS _RECEIVE_SHADOWS_OFF
+        passType: 13
+      - keywords: FOG_LINEAR TCP2_REFLECTIONS_FRESNEL TCP2_RIM_LIGHTING_LIGHTMASK
+          _ADDITIONAL_LIGHTS _MAIN_LIGHT_SHADOWS
+        passType: 13
+      - keywords: FOG_LINEAR TCP2_REFLECTIONS_FRESNEL TCP2_RIM_LIGHTING_LIGHTMASK
+          _ADDITIONAL_LIGHTS _MAIN_LIGHT_SHADOWS _RECEIVE_SHADOWS_OFF
+        passType: 13
+  - first: {fileID: 4800000, guid: ac6243b0aeb968147ad3205b6cd9c17c, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+  - first: {fileID: 4800000, guid: 26ac6b86cbebf834fb2ac55c14c9bb16, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: TCP2_NONE
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: 
+        passType: 11
+  - first: {fileID: -6465566751694194690, guid: df5bb027d94a6c44bb32b3c31ec1303f, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 8
+      - keywords: 
+        passType: 11
+      - keywords: 
+        passType: 13
+      - keywords: FOG_LINEAR TCP2_REFLECTIONS_FRESNEL TCP2_RIM_LIGHTING_LIGHTMASK
+          TCP2_SHADOW_LIGHT_COLOR TCP2_SPECULAR_STYLIZED _ADDITIONAL_LIGHTS _ADDITIONAL_LIGHT_SHADOWS
+          _MAIN_LIGHT_SHADOWS _NORMALMAP _RECEIVE_SHADOWS_OFF
+        passType: 13
+      - keywords: FOG_LINEAR TCP2_REFLECTIONS_FRESNEL TCP2_RIM_LIGHTING_LIGHTMASK
+          _ADDITIONAL_LIGHTS _MAIN_LIGHT_SHADOWS _NORMALMAP _RECEIVE_SHADOWS_OFF
+        passType: 13
+  - first: {fileID: 4800000, guid: e41dd730c9d28014c86c8ebcd9410176, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: edcdbfa66a120674dbfcc060a54ab1eb, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: c35e8621925dc4f4c8d9acd826765924, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: b30d59f10c902934a92999c763771ab7, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: cf803be647d5ad64ea11120766369bd9, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: TCP2_NONE
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 70e19283e0f45cc41b48de36b262b1bf, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 8e9d039c5cce33b4b814389ee6622395, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: TCP2_NONE
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: eecc3986d1c43554389f5eea2188c3e7, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 121194756ac93f54b912b16e3f5bcdd9, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 7690016994b62084fbdcc84057522e9b, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: f3cf78e0783ad3f4f9c704a76f994cae, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 9bd82b774d19b574f843fa85d8fda6d8, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: f1c53f19be3ea6c46b50ce448ab7c26d, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 7c5ad70fc8506bc488475ced46acb8f7, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: TCP2_NONE
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: d663657fe69b6804096696c577668339, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+  - first: {fileID: 4800000, guid: 931c98f5451d03f4e83ec061ccc91c8a, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+  - first: {fileID: 4800000, guid: bd061c33e61d2e74aabbe0a2d3a5e688, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 0a6da58fb245a9a4192c27c7c5ce9b8d, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+  - first: {fileID: 4800000, guid: 0d325ef349acc794da37e3dd556b7a99, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: EXCLUDE_TCP2_MAIN_PASS TCP2_NONE
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: ef31dc83421c32442bce0d0ac628dedc, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 6f16c19a73fd8a644ae4e41c0aa203f6, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+  - first: {fileID: 4800000, guid: 7bcde38e6d372b9438d01e647bd5dfec, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+  - first: {fileID: 4800000, guid: 944d4d9779256f446a4e8504211c93dc, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: EXCLUDE_TCP2_MAIN_PASS TCP2_NONE
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 73d75a8acbc09f644aaed8f015d61c8b, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: TCP2_NONE
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 89d14b6e7418de84eb624cbf18d4de37, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 0fc6fe3cbeb58fb46822b6e42cbede4c, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 6c12b195382e1774bb4ecf6b1b0243b0, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 4afb2fb87321fe647840db5fb623fc28, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 821eb686b9abe804f87193bcd690de25, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+  - first: {fileID: 4800000, guid: d9b5104efdb2d6743b329b68d42640dd, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: TCP2_NONE
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 8bc4e62ea9d964448a2c2e539d65b77a, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+  - first: {fileID: 4800000, guid: 7cf6e0bd6774e2a438d4701ceb5e6bae, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: e1ac70b013bdb9f4395782bbbe3c0dbe, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+  - first: {fileID: 4800000, guid: af6e3a5b6b4546f46860cc67ad6a13b5, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+  - first: {fileID: 4800000, guid: 3f17d46eadd0bb049ac072eb8db526a6, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+  - first: {fileID: 4800000, guid: a9cf457341733da4c894f5668fd17edc, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 537234c96e667364fb2c98d55875261f, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+  - first: {fileID: 4800000, guid: ea23b4ebe57654d478cbcfcef9020a85, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 83c5b06fe43d5e54abce4e8fc4138a60, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 78402b192a44dec43b0c9e7968b8afe5, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: EXCLUDE_TCP2_MAIN_PASS TCP2_NONE
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: f3df28ae79e6c194bb5a14ee5558876e, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+  - first: {fileID: 4800000, guid: dc5171e618ec63043b77368ab4e13099, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+  - first: {fileID: 4800000, guid: bdc5b3d9efb08bd4eb0d5746ae2be22d, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+  - first: {fileID: 4800000, guid: 6a47c98d22d7b354aa739e29001b2f61, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 4
+  - first: {fileID: 4800000, guid: 48a3b0f975759b7429dc496cfabc0269, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 6782973e3ca8b2543beddb0a3dc3175e, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: a6da473b89caeb1409bac856668af764, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 69d7a7b702a9355448f1417179983394, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 4
+  - first: {fileID: 4800000, guid: 807eea4ea4d70cb429c9c01492b367c7, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 4
+  - first: {fileID: 4800000, guid: f8d49205b3b0a644195633020367689d, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: ccfc7d68845db8341944b3091b59be55, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 9c4b49f6a83b6a3448b971dbb717ac14, type: 3}
+    second:
+      variants:
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 48143e9da713e374a9437557eba8a3a4, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 4
+  - first: {fileID: 4800000, guid: 7573e523b4691814693877d8bce806c3, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: a17115222a6a0af4a885f83b763d6c53, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+  - first: {fileID: 4800000, guid: 7d42628fba85ccc49b31ca2d1a16f238, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+      - keywords: 
+        passType: 11
+  - first: {fileID: 4800000, guid: 4b730ef0ae7b3b84cb612711a6eaa758, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 4
+  - first: {fileID: 4800000, guid: 9ec7ccbd4289d0543939f61121224d93, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: POINT
+        passType: 5
+      - keywords: 
+        passType: 11
