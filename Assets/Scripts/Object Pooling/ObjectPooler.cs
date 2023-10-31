@@ -53,11 +53,11 @@ public class ObjectPooler : MonoSingleton<ObjectPooler>
         return null;
     }
 
-    public GameObject GetPooledEnemy(EnemyType enemyType)
+    public GameObject GetPooledEnemy(ClothType enemyType)
     {
         for (int i = pooledEnemies.Count - 1; i > -1; i--)
         {
-            if (!pooledEnemies[i].activeInHierarchy && pooledEnemies[i].GetComponent<EnemyBase>().enemyType == enemyType)
+            if (!pooledEnemies[i].activeInHierarchy && pooledEnemies[i].GetComponent<ClothBase>().clothType == enemyType)
             {
                 return pooledEnemies[i];
             }
@@ -65,7 +65,7 @@ public class ObjectPooler : MonoSingleton<ObjectPooler>
         //pooledObjects.First(o => o.activeInHierarchy && o.tag == tag);
         foreach (ObjectPooledItem item in enemyiesToPool)
         {
-            if (item.objectToPool.GetComponent<EnemyBase>().enemyType == enemyType)
+            if (item.objectToPool.GetComponent<ClothBase>().clothType == enemyType)
             {
                 if (item.shouldExpand)
                 {

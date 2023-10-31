@@ -4,14 +4,14 @@ using UnityEngine;
 
 public readonly struct EnemyConfig
 {
-    public readonly float Size;
-    public readonly float Power;
-    public readonly int Money;
+    public readonly float ProduceDuration;
+    public readonly float PaintDuration;
+    public readonly float MoneyValue;
 
-    public EnemyConfig(float size, float power, int money)
+    public EnemyConfig(float produceDuration, float paintDuration, float money)
     {
-        Size = size;
-        Power = power;
-        Money = money;
+        ProduceDuration = produceDuration;
+        PaintDuration = paintDuration;
+        MoneyValue = money;
     }
 }

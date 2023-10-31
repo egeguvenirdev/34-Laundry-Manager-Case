@@ -9,7 +9,6 @@ public class UIManager : MonoSingleton<UIManager>
 {
     [Header("Panels")]
     [SerializeField] private List<ButtonBase> panels = new List<ButtonBase>();
-    [SerializeField] private UpgradeCard[] upgradeButtons;
 
     [Header("Level & Money")]
     [SerializeField] private TMP_Text currentLV;
@@ -29,11 +28,6 @@ public class UIManager : MonoSingleton<UIManager>
 
         LevelText();
 
-        for (int i = 0; i < upgradeButtons.Length; i++)
-        {
-            upgradeButtons[i].Init();
-        }
-
         for (int i = 0; i < panels.Count; i++)
         {
             panels[i].Init();
@@ -42,9 +36,9 @@ public class UIManager : MonoSingleton<UIManager>
 
     public void DeInit()
     {
-        for (int i = 0; i < upgradeButtons.Length; i++)
+        for (int i = 0; i < panels.Count; i++)
         {
-            panels[i].DeInit();
+            //panels[i].DeInit();
         }
     }
 
@@ -57,14 +51,6 @@ public class UIManager : MonoSingleton<UIManager>
     public void SetProgress(float progress)
     {
         progressBarImage.fillAmount = progress;
-    }
-
-    public void UpgradeButtons()
-    {
-        for (int i = 0; i < upgradeButtons.Length; i++)
-        {
-            upgradeButtons[i].OnPurchase();
-        }
     }
 
     #region Money
@@ -83,8 +69,6 @@ public class UIManager : MonoSingleton<UIManager>
             smoothMoneyNumbers = totalMoney;
             UpdateMoneyText();
         }
-
-        UpgradeButtons();
     }
 
     private void UpdateMoneyText()

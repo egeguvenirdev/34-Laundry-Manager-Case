@@ -6,23 +6,23 @@ using UnityEngine;
 public static class EnemyConfigUtility
 {
     //Dictionary
-    private static readonly Dictionary<byte, EnemyConfig> enemyConfigByLevel = new Dictionary<byte, EnemyConfig>()
+    private static readonly Dictionary<ClothType, EnemyConfig> enemyConfigByLevel = new Dictionary<ClothType, EnemyConfig>()
     {
         {
-            1,
-            new EnemyConfig(3, 35, 500)
+            ClothType.Sock,
+            new EnemyConfig(10f, 5f, 100f)
         },
         {
-            2,
-            new EnemyConfig(4, 45, 1000)
+            ClothType.Tshirt,
+            new EnemyConfig(15f, 7.5f, 500f)
         }
     };
 
-    private static readonly EnemyConfig defaultConfig = new EnemyConfig(3, 35, 500);
+    private static readonly EnemyConfig defaultConfig = new EnemyConfig(10f, 5f, 100f);
 
-    public static EnemyConfig GetEnemyConfigByLevel(byte level)
+    public static EnemyConfig GetEnemyConfigByLevel(ClothType refType)
     {
-        if (enemyConfigByLevel.TryGetValue(level, out var enemyConfig)) return enemyConfig;
+        if (enemyConfigByLevel.TryGetValue(refType, out var enemyConfig)) return enemyConfig;
         Debug.LogWarning("There is no config by given enemy level, default config returned!");
         return defaultConfig;
     }

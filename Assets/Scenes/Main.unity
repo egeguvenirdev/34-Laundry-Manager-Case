@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.5
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.36376315, g: 0.5829203, b: 0.73156315, a: 0.5}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -516,6 +516,46 @@ PrefabInstance:
     - target: {fileID: 8628133915912742278, guid: dee08fe56ee80d448974ef2f5819c3f7, type: 3}
       propertyPath: m_Name
       value: Cam Holder
+      objectReference: {fileID: 0}
+    - target: {fileID: 8628133917308557225, guid: dee08fe56ee80d448974ef2f5819c3f7, type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8628133917308557225, guid: dee08fe56ee80d448974ef2f5819c3f7, type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8628133917308557225, guid: dee08fe56ee80d448974ef2f5819c3f7, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.7924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 8628133917308557225, guid: dee08fe56ee80d448974ef2f5819c3f7, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.55983377
+      objectReference: {fileID: 0}
+    - target: {fileID: 8628133917308557225, guid: dee08fe56ee80d448974ef2f5819c3f7, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8628133917308557230, guid: dee08fe56ee80d448974ef2f5819c3f7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8628133917308557230, guid: dee08fe56ee80d448974ef2f5819c3f7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8628133917308557230, guid: dee08fe56ee80d448974ef2f5819c3f7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8628133917308557230, guid: dee08fe56ee80d448974ef2f5819c3f7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8628133917308557230, guid: dee08fe56ee80d448974ef2f5819c3f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dee08fe56ee80d448974ef2f5819c3f7, type: 3}

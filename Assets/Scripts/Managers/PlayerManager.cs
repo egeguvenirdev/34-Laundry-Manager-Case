@@ -22,24 +22,6 @@ public class PlayerManager : MonoBehaviour
     }
 
     #region Upgrade
-    public void OnUpgrade(UpgradeType type, float value)
-    {
-        switch (type)
-        {
-            case UpgradeType.Income:
-                IncomeUpgrade(value);
-                break;
-            case UpgradeType.FireRange:
-                FireRangeUpgrade(value);
-                break;
-            case UpgradeType.FireRate:
-                FireRateUpgrade(value);
-                break;
-            default:
-                Debug.Log("NOTHING");
-                break;
-        }
-    }
 
     private void IncomeUpgrade(float value)
     {
