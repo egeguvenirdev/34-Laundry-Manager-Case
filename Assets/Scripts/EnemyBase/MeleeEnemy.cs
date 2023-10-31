@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class MeleeEnemy : ClothBase
+public class MeleeEnemy : SewingMachineBase
 {
     protected override void OnDrag()
     {

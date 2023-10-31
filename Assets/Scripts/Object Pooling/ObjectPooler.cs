@@ -12,13 +12,13 @@ public class ObjectPooler : MonoSingleton<ObjectPooler>
     [Header("Holder")]
     [SerializeField] private GameObject pooledObjectHolder;
 
-    private List<ClothBase> pooledClothes;
+    private List<SewingMachineBase> pooledClothes;
     private List<SlideText> pooledText;
 
     private void Awake()
     {
         //produce the items
-        pooledClothes = new List<ClothBase>();
+        pooledClothes = new List<SewingMachineBase>();
         foreach (ObjectPooledItem item in clothesToPool)
         {
             for (int i = 0; i < item.amountToPool; i++)
@@ -26,7 +26,7 @@ public class ObjectPooler : MonoSingleton<ObjectPooler>
                 GameObject obj = (GameObject)Instantiate(item.objectToPool);
                 obj.transform.SetParent(pooledObjectHolder.transform);
                 obj.SetActive(false);
-                pooledClothes.Add(obj.GetComponent<ClothBase>());
+                pooledClothes.Add(obj.GetComponent<SewingMachineBase>());
             }
         }
 
@@ -46,7 +46,7 @@ public class ObjectPooler : MonoSingleton<ObjectPooler>
         }
     }
 
-    public ClothBase GetPooledCloth(ClothType clothesType)
+    public SewingMachineBase GetPooledCloth(ClothType clothesType)
     {
         //search for the target item
         for (int i = pooledClothes.Count - 1; i > -1; i--)
@@ -60,14 +60,14 @@ public class ObjectPooler : MonoSingleton<ObjectPooler>
         //if tthe pool not enough and can expand
         foreach (ObjectPooledItem item in clothesToPool)
         {
-            if (item.objectToPool.GetComponent<ClothBase>().clothType == clothesType)
+            if (item.objectToPool.GetComponent<SewingMachineBase>().clothType == clothesType)
             {
                 if (item.shouldExpand)
                 {
                     GameObject obj = (GameObject)Instantiate(item.objectToPool);
                     obj.transform.SetParent(pooledObjectHolder.transform);
                     obj.SetActive(false);
-                    ClothBase producedCloth = obj.GetComponent<ClothBase>();
+                    SewingMachineBase producedCloth = obj.GetComponent<SewingMachineBase>();
                     pooledClothes.Add(producedCloth);
                     return producedCloth;
                 }

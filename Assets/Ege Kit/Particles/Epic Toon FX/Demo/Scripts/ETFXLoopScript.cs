@@ -7,11 +7,11 @@ namespace EpicToonFX
 	{
 		public GameObject chosenEffect;
 		public float loopTimeLimit = 2.0f;
-		
-		[Header("Spawn options")]
+	
+		[Header("Spawn without")]
+	
 		public bool disableLights = true;
 		public bool disableSound = true;
-		public float spawnScale = 1.0f;
 
 		void Start ()
 		{	
@@ -25,10 +25,8 @@ namespace EpicToonFX
 
 		IEnumerator EffectLoop()
 		{
-			GameObject effectPlayer = (GameObject)Instantiate(chosenEffect, transform.position, transform.rotation);
-			
-			effectPlayer.transform.localScale = new Vector3(spawnScale, spawnScale, spawnScale);
-
+			GameObject effectPlayer = (GameObject) Instantiate(chosenEffect, transform.position, transform.rotation);
+		
 			if (disableLights && effectPlayer.GetComponent<Light>())
 			{
 				effectPlayer.GetComponent<Light>().enabled = false;
@@ -41,7 +39,7 @@ namespace EpicToonFX
 			
 			yield return new WaitForSeconds(loopTimeLimit);
 
-			Destroy(effectPlayer);
+			Destroy (effectPlayer);
 			PlayEffect();
 		}
 	}

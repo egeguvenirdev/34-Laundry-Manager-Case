@@ -1,24 +1,3 @@
-v1.81 (2019.4.24f1 and up) - March 1, 2023
-
-This patch add all new Powerbox effects as well as fruit missiles and explosions. Featuring whole and sliced versions of - apple, banana, coconut, grape, melon, orange, pear, pumpkin and strawberry.
-
-Total of 110 new prefabs and a new Powerbox Block shader
-
-- Added New Colored Pickup Variations (17 prefabs)
-- Added New Colored Powerbox (17 prefabs)
-- Added New Powerbox Variations (6 prefabs)
-- Added New Metal Powerbox Variations (6 prefabs)
-- Added New Powerbox Pickup Variations (6 prefabs)
-- Added Fruit Missiles (9 prefabs)
-- Added Fruit Explosions (9 prefabs)
-- Added Fruit Blast, Fruit Directional, Fruit Fountain, Fruit Shower (40 prefabs)
-- Added Power-up Block Shader
-- Improved leaf texture
-- Updated 2D Demo
-
-Note: No custom muzzles are included for the missile/explosion effects, but use the LiquidMuzzleWaterClear effect
-
-
 v1.8 (For 2019.4.24f1 and up) - December 5, 2021
 
 This patch improves on existing visuals and sound effects, and also features all new content such as new missiles, water and fire effects, powerup boxes and more.
@@ -290,7 +269,6 @@ This update adds all new effects, as well as improvements to textures and older 
 - Removed TGA versions for emojis
 
 v1.4 (Unity 5.3.4)
-
 - 76 new prefabs
 - Added new Magic Missile FX
 - Added new Lightning Missile FX
@@ -319,12 +297,10 @@ v1.4 (Unity 5.3.4)
 - Improved spritesheet animations
 
 v1.31 (Unity 2017.1)
-
 - Fixed missing shield material
 - Fixed error on one explosion type
 
 v1.3 (Unity 5.3.4 and up)
-
 - Added 6 new explosion FX (25 prefabs)
 - Added 11 new missile FX (45 prefabs)
 - Added 11 new muzzleflash FX (45 prefabs)
@@ -333,7 +309,6 @@ v1.3 (Unity 5.3.4 and up)
 - Improved misc effects
 
 v1.2 (Unity 5.3.4 and up)
-
 - Additional visual improvements
 - New 2D-versions of effects for sidescroller games
 - New Sword Slash FX
@@ -342,7 +317,6 @@ v1.2 (Unity 5.3.4 and up)
 - Easier to scale effects
 
 v1.1 (Unity 5.3.4 and up)
-
 - Overall visual improvements
 - Tweaked and improved nearly every effect(!)
 - Re-designed some effects

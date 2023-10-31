@@ -521,15 +521,6 @@ MonoBehaviour:
   - {fileID: 121052, guid: 45b74d42e5559bf49a14a707b4842b51, type: 3}
   - {fileID: 188560, guid: 9c3b7f4ace8832b40abe6afe89fbcd91, type: 3}
   - {fileID: 1272483159307946, guid: cc0bdc9defd87ef4fba2c3954f1bb0d1, type: 3}
-  - {fileID: 3310440506069473701, guid: 5108f99c0703c3944a63ea56d6b32738, type: 3}
-  - {fileID: 4508092089921565386, guid: 1fb865070cc3b0c479ba2a42b6a643f8, type: 3}
-  - {fileID: 503375641016725823, guid: 10c11172dee1ade4a8c67ce0b9e9a4e9, type: 3}
-  - {fileID: 996586481641223000, guid: ec4c4bad7b7a1f94381dd4f33b433324, type: 3}
-  - {fileID: 5290070807105371901, guid: 793724a73daf1814f9890afbf8cac95f, type: 3}
-  - {fileID: 639084688307584252, guid: db1db40dea0e9fa4fa6ef772389ef4ed, type: 3}
-  - {fileID: 1427534462713666284, guid: e37b49eebcc51b34bacb9ced9294bdb4, type: 3}
-  - {fileID: 8080307054810306849, guid: bfeed802a1559fe4fb12baedc772be06, type: 3}
-  - {fileID: 421133045242754783, guid: 5d7eb0179dab0c347880c883863597a7, type: 3}
   disableLights: 0
   disableSound: 0
   startDelay: 0
