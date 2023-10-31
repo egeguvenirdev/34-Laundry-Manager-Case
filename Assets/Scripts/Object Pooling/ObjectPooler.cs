@@ -7,11 +7,13 @@ public class ObjectPooler : MonoSingleton<ObjectPooler>
 {
     [Header("Item Types")]
     [SerializeField] private List<ObjectPooledItem> clothesToPool;
+    [SerializeField] private List<ObjectPooledItem> slideTextToPool;
 
     [Header("Holder")]
     [SerializeField] private GameObject pooledObjectHolder;
 
     private List<ClothBase> pooledClothes;
+    private List<SlideText> pooledText;
 
     private void Awake()
     {
@@ -25,6 +27,21 @@ public class ObjectPooler : MonoSingleton<ObjectPooler>
                 obj.transform.SetParent(pooledObjectHolder.transform);
                 obj.SetActive(false);
                 pooledClothes.Add(obj.GetComponent<ClothBase>());
+            }
+        }
+
+        pooledText = new List<SlideText>();
+        foreach (ObjectPooledItem item in slideTextToPool)
+        {
+            for (int i = 0; i < item.amountToPool; i++)
+            {
+                GameObject obj = (GameObject)Instantiate(item.objectToPool);
+                obj.transform.SetParent(pooledObjectHolder.transform);
+                obj.SetActive(false);
+
+                SlideText slideText = obj.GetComponent<SlideText>();
+                slideText.Init();
+                pooledText.Add(slideText);
             }
         }
     }
@@ -54,6 +71,36 @@ public class ObjectPooler : MonoSingleton<ObjectPooler>
                     pooledClothes.Add(producedCloth);
                     return producedCloth;
                 }
+            }
+        }
+        return null;
+    }
+
+    public SlideText GetPooledText()
+    {
+        //search for the target item
+        for (int i = pooledText.Count - 1; i > -1; i--)
+        {
+            if (!pooledText[i].gameObject.activeInHierarchy)
+            {
+                return pooledText[i];
+            }
+        }
+
+        //if tthe pool not enough and can expand
+        foreach (ObjectPooledItem item in clothesToPool)
+        {
+            if (item.shouldExpand)
+            {
+                GameObject obj = (GameObject)Instantiate(item.objectToPool);
+                obj.transform.SetParent(pooledObjectHolder.transform);
+                obj.SetActive(false);
+
+                SlideText slideText = obj.GetComponent<SlideText>();
+                slideText.Init();
+                pooledText.Add(slideText);
+
+                return slideText;
             }
         }
         return null;

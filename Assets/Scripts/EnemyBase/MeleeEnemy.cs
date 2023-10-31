@@ -10,7 +10,7 @@ public class MeleeEnemy : ClothBase
 
     }
 
-    private void PlayParticle(string particleName)
+    /*private void PlayParticle(string particleName)
     {
         var particle = ObjectPooler.Instance.GetPooledObjectWithTag(particleName);
         Vector3 particlePos = new Vector3(transform.position.x, 0.25f, transform.position.z);
@@ -18,5 +18,5 @@ public class MeleeEnemy : ClothBase
         particle.transform.rotation = Quaternion.identity;
         particle.SetActive(true);
         particle.GetComponent<ParticleSystem>().Play();
-    }
+    }*/
 }

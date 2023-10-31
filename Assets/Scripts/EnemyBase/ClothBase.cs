@@ -26,14 +26,14 @@ public class ClothBase : MonoBehaviour
 
     }
 
-    protected void PlayDamageText(float hitAmount)
+    /*protected void PlayDamageText(float hitAmount)
     {
         if (hitAmount <= 0) return;
-        var text = ObjectPooler.Instance.GetPooledObjectWithTag("DamageText");
+        var text = ObjectPooler.Instance.GetPooledCloth();
         text.transform.position = transform.position;
         text.GetComponent<MoneyText>().SetTheText((int)hitAmount);
         text.SetActive(true);
-    }
+    }*/
 
     private void SetProperties()
     {
