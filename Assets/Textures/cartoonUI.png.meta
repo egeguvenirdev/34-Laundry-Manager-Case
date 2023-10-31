@@ -1,0 +1,759 @@
+fileFormatVersion: 2
+guid: d2379844d0a45d941a90316d1beb9932
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2195471885469657826
+    second: cartoonUI_0
+  - first:
+      213: -4684863815016932038
+    second: cartoonUI_1
+  - first:
+      213: -1582489955658983209
+    second: cartoonUI_2
+  - first:
+      213: 7326755756664982634
+    second: cartoonUI_3
+  - first:
+      213: -1659832360094301643
+    second: cartoonUI_4
+  - first:
+      213: -8561332970127213390
+    second: cartoonUI_5
+  - first:
+      213: 279247001549991946
+    second: cartoonUI_6
+  - first:
+      213: -3536216110198916515
+    second: cartoonUI_7
+  - first:
+      213: -4037349818727014410
+    second: cartoonUI_8
+  - first:
+      213: -5336786806756223249
+    second: cartoonUI_9
+  - first:
+      213: 7976676161763535336
+    second: cartoonUI_10
+  - first:
+      213: -740504318398498437
+    second: cartoonUI_11
+  - first:
+      213: -8387757149284198681
+    second: cartoonUI_12
+  - first:
+      213: -5151937875312662393
+    second: cartoonUI_13
+  - first:
+      213: -119309046630334849
+    second: cartoonUI_14
+  - first:
+      213: -2296335822298346807
+    second: cartoonUI_15
+  - first:
+      213: -6550600755495098204
+    second: cartoonUI_16
+  - first:
+      213: -1242301549628717423
+    second: cartoonUI_17
+  - first:
+      213: -4093800042262944795
+    second: cartoonUI_18
+  - first:
+      213: 3554709331194288342
+    second: cartoonUI_19
+  - first:
+      213: 4218500790459856980
+    second: cartoonUI_20
+  - first:
+      213: 58455071567995511
+    second: cartoonUI_21
+  - first:
+      213: -4913803284919228900
+    second: cartoonUI_22
+  - first:
+      213: -5222809837297950201
+    second: cartoonUI_23
+  - first:
+      213: 3506312681383107408
+    second: cartoonUI_24
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cartoonUI_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1841
+        width: 173
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eaa6c73c02e77e10800000000000000
+      internalID: 2195471885469657826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartoonUI_1
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 1841
+        width: 173
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3d95d48e250cfeb0800000000000000
+      internalID: -4684863815016932038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartoonUI_2
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 1841
+        width: 173
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d8925c05cdd90ae0800000000000000
+      internalID: -1582489955658983209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartoonUI_3
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1841
+        width: 174
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c8018ba8ddda560800000000000000
+      internalID: 7326755756664982634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartoonUI_4
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 1841
+        width: 174
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53281ed334717f8e0800000000000000
+      internalID: -1659832360094301643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartoonUI_5
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 1881
+        width: 126
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bc3ab70609003980800000000000000
+      internalID: -8561332970127213390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartoonUI_6
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 1877
+        width: 156
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a00fafb1ba510e300800000000000000
+      internalID: 279247001549991946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartoonUI_7
+      rect:
+        serializedVersion: 2
+        x: 1699
+        y: 1771
+        width: 195
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a7496fe26dceec0800000000000000
+      internalID: -3536216110198916515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartoonUI_8
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 1602
+        width: 585
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ffd9cc0bb378f7c0800000000000000
+      internalID: -4037349818727014410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartoonUI_9
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 1476
+        width: 518
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe6dd4dbcacefe5b0800000000000000
+      internalID: -5336786806756223249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartoonUI_10
+      rect:
+        serializedVersion: 2
+        x: 1646
+        y: 1392
+        width: 301
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e9ed36f4b8d2be60800000000000000
+      internalID: 7976676161763535336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartoonUI_11
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 1309
+        width: 587
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b79f63bee3339b5f0800000000000000
+      internalID: -740504318398498437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartoonUI_12
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 1171
+        width: 222
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e61cae1053b89b80800000000000000
+      internalID: -8387757149284198681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartoonUI_13
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 1019
+        width: 587
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 788ab1d6cc3a088b0800000000000000
+      internalID: -5151937875312662393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartoonUI_14
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 1132
+        width: 866
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7ebb11ed01285ef0800000000000000
+      internalID: -119309046630334849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartoonUI_15
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 726
+        width: 587
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ca07e27cb6c120e0800000000000000
+      internalID: -2296335822298346807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartoonUI_16
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 819
+        width: 304
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a82f47c1579715a0800000000000000
+      internalID: -6550600755495098204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartoonUI_17
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 819
+        width: 234
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1968676925572cee0800000000000000
+      internalID: -1242301549628717423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartoonUI_18
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 434
+        width: 587
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3207b2d86ef27c0800000000000000
+      internalID: -4093800042262944795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartoonUI_19
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 197
+        width: 578
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d81a959d4dd45130800000000000000
+      internalID: 3554709331194288342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartoonUI_20
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 197
+        width: 578
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458701c4e102b8a30800000000000000
+      internalID: 4218500790459856980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartoonUI_21
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 29
+        width: 505
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7726120f39cafc000800000000000000
+      internalID: 58455071567995511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartoonUI_22
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 29
+        width: 508
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c16ed3262f9aecbb0800000000000000
+      internalID: -4913803284919228900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartoonUI_23
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 29
+        width: 314
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702a076ef1ad487b0800000000000000
+      internalID: -5222809837297950201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartoonUI_24
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 29
+        width: 313
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05b99457ecce8a030800000000000000
+      internalID: 3506312681383107408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      cartoonUI_22: -4913803284919228900
+      cartoonUI_0: 2195471885469657826
+      cartoonUI_18: -4093800042262944795
+      cartoonUI_5: -8561332970127213390
+      cartoonUI_20: 4218500790459856980
+      cartoonUI_8: -4037349818727014410
+      cartoonUI_21: 58455071567995511
+      cartoonUI_4: -1659832360094301643
+      cartoonUI_2: -1582489955658983209
+      cartoonUI_19: 3554709331194288342
+      cartoonUI_1: -4684863815016932038
+      cartoonUI_11: -740504318398498437
+      cartoonUI_24: 3506312681383107408
+      cartoonUI_7: -3536216110198916515
+      cartoonUI_3: 7326755756664982634
+      cartoonUI_16: -6550600755495098204
+      cartoonUI_14: -119309046630334849
+      cartoonUI_15: -2296335822298346807
+      cartoonUI_10: 7976676161763535336
+      cartoonUI_6: 279247001549991946
+      cartoonUI_17: -1242301549628717423
+      cartoonUI_12: -8387757149284198681
+      cartoonUI_13: -5151937875312662393
+      cartoonUI_23: -5222809837297950201
+      cartoonUI_9: -5336786806756223249
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
