@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 061414766444d4d078f6f4a17b0f255e, type: 3}
     - target: {fileID: 4452468312461463280, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
       propertyPath: m_Name
-      value: Short Machine
+      value: Short Machine Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8213578912249042214, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
       propertyPath: m_RootOrder
@@ -61,3 +61,58 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
+--- !u!1 &3916789054369462873 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6557779578978236866, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
+  m_PrefabInstance: {fileID: 7879842687285363611}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &3987271109825150074 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 6489531886574288865, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
+  m_PrefabInstance: {fileID: 7879842687285363611}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5016072978758136793 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2938168712652058690, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
+  m_PrefabInstance: {fileID: 7879842687285363611}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5460499172343291639 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2782455170117442924, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
+  m_PrefabInstance: {fileID: 7879842687285363611}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aedcb1ada98812a44bd01442ad843125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &5805293283507195243 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4452468312461463280, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
+  m_PrefabInstance: {fileID: 7879842687285363611}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1159034113944635700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5805293283507195243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92f202837adc52f4ab1e281644f26629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 3987271109825150074}
+  machineRope: {fileID: 5460499172343291639}
+  clothType: 0
+  lockUI: {fileID: 7834122277520094110}
+  moneyUI: {fileID: 3916789054369462873}
+  machineSymbol: {fileID: 5016072978758136793}
+  unlockParticle: {fileID: 0}
+--- !u!1 &7834122277520094110 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 135872804705120261, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
+  m_PrefabInstance: {fileID: 7879842687285363611}
+  m_PrefabAsset: {fileID: 0}

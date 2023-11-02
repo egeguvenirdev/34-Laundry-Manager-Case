@@ -99,8 +99,8 @@ public class SewingMachineBase : MonoBehaviour
     protected void UnlockTheMachine()
     {
         CanProduce = true;
-        unlockParticle.Play();
-        moneyUI.SetActive(false);
+        //unlockParticle.Play();
+        if(moneyUI != null) moneyUI.SetActive(false);
         UnlockCheck = true;
         machineSymbol.SetActive(true);
     }
