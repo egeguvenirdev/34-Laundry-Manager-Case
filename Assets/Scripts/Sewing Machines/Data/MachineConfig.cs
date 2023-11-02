@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public readonly struct EnemyConfig
+public readonly struct MachineConfig
 {
     public readonly float ProduceDuration;
-    public readonly float PaintDuration;
+    public readonly int UnlockLevel;
     public readonly float MoneyValue;
 
-    public EnemyConfig(float produceDuration, float paintDuration, float money)
+    public MachineConfig(float produceDuration, int unlockLevel, float money)
     {
         ProduceDuration = produceDuration;
-        PaintDuration = paintDuration;
+        UnlockLevel = unlockLevel;
         MoneyValue = money;
     }
 }

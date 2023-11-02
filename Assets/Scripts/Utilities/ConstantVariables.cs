@@ -14,33 +14,16 @@ public static class ConstantVariables
         public const string TotalMoney = nameof(TotalMoney);
     }
 
-    public static class LevelStats
+    public static class ClothType
     {
-        public const string Lv = nameof(Lv);
-        public const string SkillLevel = nameof(SkillLevel);
+        public const string Short = nameof(Short);
+        public const string Sock = nameof(Sock);
+        public const string Slip = nameof(Slip);
+        public const string Bra = nameof(Bra);
     }
 
-    public static class UpgradeValues
+    public static class BuyCheck
     {
-        public const string UpgradeCurrentValue = nameof(UpgradeCurrentValue);
-        public const string UpgradeIncrementalValue = nameof(UpgradeIncrementalValue);
-    }
-
-    public static class UpgradePrices
-    {
-        public const string CurrentPrice = nameof(CurrentPrice);
-        public const string IncrementalPrice = nameof(IncrementalPrice);
-    }
-
-    public static class UpgradeTypes
-    {
-        public const string Income = nameof(Income);
-        public const string FireRate = nameof(FireRate);
-        public const string FireRange = nameof(FireRange);
-    }
-
-    public static class BuyBallButton
-    {
-        public const string BuyButton = nameof(BuyButton);
+        public const string UnlockCheck = nameof(UnlockCheck);
     }
 }

@@ -51,7 +51,7 @@ public class ObjectPooler : MonoSingleton<ObjectPooler>
         //search for the target item
         for (int i = pooledClothes.Count - 1; i > -1; i--)
         {
-            if (!pooledClothes[i].gameObject.activeInHierarchy && pooledClothes[i].clothType == clothesType)
+            if (!pooledClothes[i].gameObject.activeInHierarchy && pooledClothes[i].GetClothType == clothesType)
             {
                 return pooledClothes[i];
             }
@@ -60,7 +60,7 @@ public class ObjectPooler : MonoSingleton<ObjectPooler>
         //if tthe pool not enough and can expand
         foreach (ObjectPooledItem item in clothesToPool)
         {
-            if (item.objectToPool.GetComponent<SewingMachineBase>().clothType == clothesType)
+            if (item.objectToPool.GetComponent<SewingMachineBase>().GetClothType == clothesType)
             {
                 if (item.shouldExpand)
                 {

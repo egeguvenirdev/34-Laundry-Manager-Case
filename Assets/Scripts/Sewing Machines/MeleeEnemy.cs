@@ -5,11 +5,6 @@ using DG.Tweening;
 
 public class MeleeEnemy : SewingMachineBase
 {
-    protected override void OnDrag()
-    {
-
-    }
-
     /*private void PlayParticle(string particleName)
     {
         var particle = ObjectPooler.Instance.GetPooledObjectWithTag(particleName);

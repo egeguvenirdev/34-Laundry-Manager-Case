@@ -14,10 +14,10 @@ public class MoneyManager : MonoSingleton<MoneyManager>
         private set => moneyMultiplier = value;
     }
 
-    public float Money
+    private float Money
     {
         get => PlayerPrefs.GetInt(ConstantVariables.TotalMoneyValue.TotalMoney, 0);
-        private set
+        set
         {
             float calculatedMoney = value;
             if (value > 0)
@@ -37,11 +37,9 @@ public class MoneyManager : MonoSingleton<MoneyManager>
 
         if (clearPlayerPrefs)
         {
-            PlayerPrefs.DeleteAll();
+            PlayerPrefs.SetFloat(ConstantVariables.TotalMoneyValue.TotalMoney, 0);
             Money = addMoney;
         }
-
-        if (Money <= 0) Money = addMoney;
         Money = 0;
     }
 

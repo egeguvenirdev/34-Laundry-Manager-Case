@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 5385288104718319492}
   - component: {fileID: 6230078421170978419}
   - component: {fileID: 8711607085414919466}
+  - component: {fileID: 1647719256366179573}
   m_Layer: 0
   m_Name: Rope
   m_TagString: Untagged
@@ -341,6 +342,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1647719256366179573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4714582896077044390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aedcb1ada98812a44bd01442ad843125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ropes:
+  - {fileID: 2782774708742721150}
+  - {fileID: 8038841523348778304}
+  - {fileID: 2060750127066038110}
+  - {fileID: 8673328550952661401}
+  - {fileID: 6016031987997177648}
+  - {fileID: 8833964430319241715}
+  - {fileID: 9165998634422344850}
+  - {fileID: 5151488424508382166}
+  - {fileID: 3499378057794341190}
 --- !u!1 &5151488424508382166
 GameObject:
   m_ObjectHideFlags: 0

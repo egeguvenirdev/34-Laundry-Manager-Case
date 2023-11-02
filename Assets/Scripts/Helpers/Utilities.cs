@@ -4,8 +4,10 @@ using UnityEngine;
 
 public enum ClothType
 {
-    Tshirt,
-    Sock
+    Short,
+    Sock,
+    Slip,
+    Bra
 }
 
 public static class Utilities
