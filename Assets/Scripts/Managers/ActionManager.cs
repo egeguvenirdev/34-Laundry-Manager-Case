@@ -13,6 +13,8 @@ public static class ActionManager
 
     public static Action<float> UpdateManager { get; set; }
 
+    public static Action GainRope { get; set; }
+
 
     //Input Actions
     public static Action<GameObject> RopeSelection { get; set; }

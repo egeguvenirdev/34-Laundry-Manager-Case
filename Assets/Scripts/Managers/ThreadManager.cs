@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class ThreadManager : MonoBehaviour
 {
-    [SerializeField] private Thread[] threads;
+    [SerializeField] private List<Thread> threads = new List<Thread>();
     private ObjectPooler pooler;
 
     public void Init()
     {
-        for (int i = 0; i < threads.Length; i++)
+        ActionManager.GainRope += OnEarnThread;
+        pooler = ObjectPooler.Instance;
+
+        for (int i = 0; i < threads.Count; i++)
         {
             threads[i].Init();
         }
@@ -17,9 +20,16 @@ public class ThreadManager : MonoBehaviour
 
     public void DeInit()
     {
-        for (int i = 0; i < threads.Length; i++)
+        ActionManager.GainRope -= OnEarnThread;
+
+        for (int i = 0; i < threads.Count; i++)
         {
             threads[i].DeInit();
         }
+    }
+
+    private void OnEarnThread()
+    {
+
     }
 }
