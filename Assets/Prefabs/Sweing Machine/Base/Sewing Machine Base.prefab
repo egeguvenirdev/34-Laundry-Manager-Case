@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6357000174403774600}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Locked UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ Transform:
   - {fileID: 7414191150558994797}
   - {fileID: 1732340255606485956}
   m_Father: {fileID: 8213578912249042214}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &190559819093237016
 GameObject:
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 7712834593537027679}
   - component: {fileID: 7320868034950240262}
   - component: {fileID: 1035998397421613064}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Money Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8665144474730140177}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Machine Type Symbol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +237,7 @@ Transform:
   - {fileID: 8719826401672437322}
   - {fileID: 3614355372135196963}
   m_Father: {fileID: 8213578912249042214}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4060460664957926339
 GameObject:
@@ -248,7 +248,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3844114567654014269}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8213578912249042214}
-  m_Layer: 0
+  - component: {fileID: 9016102110440913861}
+  m_Layer: 6
   m_Name: Sewing Machine Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,54 +301,21 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3844114567654014269}
-  - {fileID: 4888458971206048229}
   - {fileID: 8665144474730140177}
   - {fileID: 6357000174403774600}
   - {fileID: 594915598548349148}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4872815335214275760
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4888458971206048229}
-  - component: {fileID: 6489531886574288865}
-  m_Layer: 0
-  m_Name: Collider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4888458971206048229
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4872815335214275760}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8213578912249042214}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6489531886574288865
+--- !u!65 &9016102110440913861
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4872815335214275760}
+  m_GameObject: {fileID: 4452468312461463280}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 0.8, z: 0.5}
@@ -362,7 +330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7414191150558994797}
   - component: {fileID: 2590869003271185274}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Lock Symbol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,7 +414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2650762083407629303}
   - component: {fileID: 8671319476272416550}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Back Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,7 +498,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3614355372135196963}
   - component: {fileID: 1594194278816489143}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -613,7 +581,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 594915598548349148}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Purchace UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -635,7 +603,7 @@ Transform:
   - {fileID: 5561190817248370236}
   - {fileID: 7712834593537027679}
   m_Father: {fileID: 8213578912249042214}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7374977742817617227
 GameObject:
@@ -648,7 +616,7 @@ GameObject:
   - component: {fileID: 1732340255606485956}
   - component: {fileID: 1335276625471459362}
   - component: {fileID: 7372128619681908341}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Level Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -819,7 +787,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8719826401672437322}
   - component: {fileID: 4430310293954558175}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Symbol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -903,7 +871,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5561190817248370236}
   - component: {fileID: 5058929872506465316}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Lock Symbol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -984,6 +952,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3844114567654014269}
     m_Modifications:
+    - target: {fileID: 603162495007596951, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2184511905147250351, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2399898145483750856, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618796488900761487, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3674757354326153507, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1048,9 +1032,53 @@ PrefabInstance:
       propertyPath: m_Name
       value: SweingMachine02
       objectReference: {fileID: 0}
+    - target: {fileID: 4158103337967616921, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167326891029429649, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653149182917187912, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780042148873085218, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186668939812369475, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287349558040708497, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760733372704464865, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880338802090535860, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8764854729263616631, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
       propertyPath: m_Name
       value: Rope Cylinder
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764854729263616631, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081228042067113032, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9201794910397608711, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}

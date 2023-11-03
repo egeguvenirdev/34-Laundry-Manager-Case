@@ -17,6 +17,7 @@ public class GameManager : MonoSingleton<GameManager>
     private UIManager uIManager;
     private BandRotator bandRotator;
     private MachineManager machineManager;
+    private ThreadManager threadManager;
 
     void Start()
     {
@@ -28,22 +29,24 @@ public class GameManager : MonoSingleton<GameManager>
         levelManager = LevelManager.Instance;
         levelManager.Init();
 
-        moneyManager = MoneyManager.Instance;
-        moneyManager.Init(clearPlayerPrefs);
-
         uIManager = UIManager.Instance;
         uIManager.Init();
+
+        moneyManager = MoneyManager.Instance;
+        moneyManager.Init(clearPlayerPrefs);
 
         updateManager = FindObjectOfType<UpdateManager>();
         updateManager.Init();
 
         camManager = FindObjectOfType<CamManager>();
-        camManager.Init();
 
         bandRotator = FindObjectOfType<BandRotator>();
 
         machineManager = FindObjectOfType<MachineManager>();
         machineManager.Init();
+
+        threadManager = FindObjectOfType<ThreadManager>();
+        threadManager.Init();
     }
 
     private void DeInits()
@@ -55,12 +58,14 @@ public class GameManager : MonoSingleton<GameManager>
         camManager.DeInit();
         bandRotator.DeInit();
         machineManager.DeInit();
+        threadManager.DeInit();
     }
 
     public void OnStartTheGame()
     {
         playerManager = FindObjectOfType<PlayerManager>();
         playerManager.Init();
+        camManager.Init();
     }
 
     public void OnLevelSucceed()

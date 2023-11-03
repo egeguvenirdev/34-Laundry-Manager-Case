@@ -5,7 +5,7 @@ using UnityEngine;
 public class SewingMachineBase : MonoBehaviour
 {
     [Header("Components")]
-    [SerializeField] public Collider col;
+    public Collider col;
     [SerializeField] public MachineRope machineRope;
 
     [Header("Properties")]
@@ -41,13 +41,14 @@ public class SewingMachineBase : MonoBehaviour
 
     public void Init(int currentLevel)
     {
+        col = GetComponent<Collider>();
         pooler = ObjectPooler.Instance;
         SetProperties();
 
-        if(currentLevel >= unlockLevel)
+        if (currentLevel >= unlockLevel)
         {
             lockUI.SetActive(false);
-            if (!UnlockCheck ) 
+            if (!UnlockCheck)
             {
                 if (moneyUI != null)
                 {
@@ -67,14 +68,23 @@ public class SewingMachineBase : MonoBehaviour
 
     }
 
-    private void OnMouseDown()
+    protected void OnMouseDown()
     {
+        Debug.Log("Clicked");
         if (buyable && !UnlockCheck)
         {
-            if(ActionManager.CheckMoneyAmount(moneyValue))
+            if (ActionManager.CheckMoneyAmount(moneyValue))
             {
                 UnlockTheMachine();
             }
+            return;
+        }
+
+        if (canProduce)
+        {
+            StartCoroutine(ProduceClothes());
+            ActionManager.ClearRopeSelection?.Invoke();
+            Debug.Log("Clicked");
         }
     }
 
@@ -100,7 +110,7 @@ public class SewingMachineBase : MonoBehaviour
     {
         CanProduce = true;
         //unlockParticle.Play();
-        if(moneyUI != null) moneyUI.SetActive(false);
+        if (moneyUI != null) moneyUI.SetActive(false);
         UnlockCheck = true;
         machineSymbol.SetActive(true);
     }
@@ -110,14 +120,16 @@ public class SewingMachineBase : MonoBehaviour
     #region Produce
     public IEnumerator ProduceClothes()
     {
+        CanProduce = false;
         machineRope.Init(produceDuration);
         yield return new WaitForSeconds(produceDuration);
+        CanProduce = true;
         PlayClothAnim();
     }
 
     private void PlayClothAnim()
     {
-
+        //needle will play up and down
     }
     #endregion
 

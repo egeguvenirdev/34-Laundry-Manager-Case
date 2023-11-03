@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoneyManager : MonoSingleton<MoneyManager>
 {
     [Header("Money Settings")]
-    [SerializeField] private int addMoney = 0;
+    [SerializeField] private int addMoney = 500;
     private float moneyMultiplier = 1;
 
     public float MoneyMultipler
@@ -14,17 +14,17 @@ public class MoneyManager : MonoSingleton<MoneyManager>
         private set => moneyMultiplier = value;
     }
 
-    private float Money
+    public float Money
     {
-        get => PlayerPrefs.GetInt(ConstantVariables.TotalMoneyValue.TotalMoney, 0);
-        set
+        get => PlayerPrefs.GetFloat(ConstantVariables.TotalMoneyValue.TotalMoney, 0);
+        private set
         {
             float calculatedMoney = value;
             if (value > 0)
             {
                 calculatedMoney = value * moneyMultiplier;
             }
-            PlayerPrefs.SetFloat(ConstantVariables.TotalMoneyValue.TotalMoney, PlayerPrefs.GetInt(ConstantVariables.TotalMoneyValue.TotalMoney, 0) + calculatedMoney);
+            PlayerPrefs.SetFloat(ConstantVariables.TotalMoneyValue.TotalMoney, PlayerPrefs.GetFloat(ConstantVariables.TotalMoneyValue.TotalMoney, 0) + calculatedMoney);
             UIManager.Instance.SetMoneyUI(Money, true);
         }
     }

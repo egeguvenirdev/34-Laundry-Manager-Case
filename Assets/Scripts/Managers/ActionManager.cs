@@ -13,12 +13,21 @@ public static class ActionManager
 
     public static Action<float> UpdateManager { get; set; }
 
-    //MoneyActions
+
+    //Input Actions
+    public static Action<GameObject> RopeSelection { get; set; }
+
+    public static Action ClearRopeSelection { get; set; }
+
+
+    //Money Actions
     public static Action<float> UpdateMoney { get; set; }
+
 
     public static Action<float> UpdateMoneyMultiplier { get; set; }
 
     public static Predicate<float> CheckMoneyAmount { get; set; }
+
 
     //Player Controls
     public static Action<float> SwerveValue { get; set; }

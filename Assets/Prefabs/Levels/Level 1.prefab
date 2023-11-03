@@ -267,7 +267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4188989429859790361, guid: bc709563bca78ae4b86e1d3fae277daa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.166
+      value: -0.239
       objectReference: {fileID: 0}
     - target: {fileID: 4188989429859790361, guid: bc709563bca78ae4b86e1d3fae277daa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -479,7 +479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7745496298646430037, guid: 7b70b6ba0e5805b4d96e5cd6a2ba01ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.166
+      value: -0.239
       objectReference: {fileID: 0}
     - target: {fileID: 7745496298646430037, guid: 7b70b6ba0e5805b4d96e5cd6a2ba01ec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -598,6 +598,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9906064a3cc5e1647b1a52b405d5977a, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9906064a3cc5e1647b1a52b405d5977a, type: 3}
       propertyPath: m_Name
       value: shelf
@@ -634,11 +638,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9906064a3cc5e1647b1a52b405d5977a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9906064a3cc5e1647b1a52b405d5977a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.18
+      value: -0.25299993
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9906064a3cc5e1647b1a52b405d5977a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -674,6 +678,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9906064a3cc5e1647b1a52b405d5977a, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9906064a3cc5e1647b1a52b405d5977a, type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9906064a3cc5e1647b1a52b405d5977a, type: 3}
