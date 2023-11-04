@@ -103,6 +103,7 @@ MonoBehaviour:
   clothType: 2
   threadTargetPos: {fileID: 8816351857111108606}
   machineSymbol: {fileID: 6831853836704874454}
+  machineSymbolBorder: {fileID: 6923811081592049955}
   lockUI: {fileID: 8641090084301553553}
   levelText: {fileID: 1172881855075420641}
   moneyUI: {fileID: 3244861084811327062}
@@ -122,6 +123,11 @@ MonoBehaviour:
 --- !u!1 &6831853836704874454 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2938168712652058690, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
+  m_PrefabInstance: {fileID: 8505582527944331156}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &6923811081592049955 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1594194278816489143, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
   m_PrefabInstance: {fileID: 8505582527944331156}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &8641090084301553553 stripped

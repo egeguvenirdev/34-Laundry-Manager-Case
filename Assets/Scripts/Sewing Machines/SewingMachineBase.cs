@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using DG.Tweening;
 
-public class SewingMachineBase : MonoBehaviour
+public abstract class SewingMachineBase : MonoBehaviour
 {
     [Header("Components")]
     private Collider col;
@@ -23,6 +24,12 @@ public class SewingMachineBase : MonoBehaviour
     [SerializeField] private TMP_Text moneyText;
     [SerializeField] private ParticleSystem unlockParticle;
 
+    [Header("Produce Settings")]
+    [SerializeField] private SpriteRenderer machineSymbolBorder;
+    [SerializeField] private Transform producePos;
+    private Color white = Color.white;
+    private Color green = Color.green;
+
     //Machine Props
     protected float produceDuration;
     protected float unlockLevel;
@@ -30,6 +37,7 @@ public class SewingMachineBase : MonoBehaviour
 
     private bool buyable = false;
     private bool canProduce = false;
+    private bool producedClothes = false;
 
     private ObjectPooler pooler;
     private MoneyManager moneyManager;
@@ -91,10 +99,16 @@ public class SewingMachineBase : MonoBehaviour
             return;
         }
 
+        if (producedClothes)
+        {
+            GetClothes();
+        }
+
         if (canProduce)
         {
             ActionManager.GetSelectedThread?.Invoke(this);
             ActionManager.ClearThreadSelection?.Invoke();
+            return;
         }
     }
 
@@ -131,16 +145,36 @@ public class SewingMachineBase : MonoBehaviour
     public IEnumerator ProduceClothes(float delay)
     {
         CanProduce = false;
+        StartProduce();
         yield return new WaitForSeconds(delay);
         machineRope.Init(produceDuration);
         yield return new WaitForSeconds(produceDuration);
-        CanProduce = true;
+        producedClothes = true;
         PlayClothAnim();
     }
 
+    protected abstract void StartProduce();
+
     private void PlayClothAnim()
     {
-        //needle will play up and down
+        Material spriteMat = machineSymbolBorder.material;
+        TurnToGreen(spriteMat);
+    }
+
+    private void TurnToGreen(Material refMat)
+    {
+        refMat.DOColor(white, 0.5f).OnComplete( () => { TurnToWhite(refMat); } );
+    }
+
+    private void TurnToWhite(Material refMat)
+    {
+        refMat.DOColor(green, 0.5f).OnComplete(() => { TurnToGreen(refMat); });
+    }
+
+    public void GetClothes()
+    {
+        CanProduce = true;
+        DOTween.KillAll();
     }
     #endregion
 

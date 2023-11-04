@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class SlipMachine : SewingMachineBase
 {
+    protected override void StartProduce()
+    {
 
+    }
 }

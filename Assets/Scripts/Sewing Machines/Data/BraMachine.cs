@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class BraMachine : SewingMachineBase
 {
+    protected override void StartProduce()
+    {
 
+    }
 }

@@ -61,6 +61,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
+--- !u!212 &909250041858960068 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1594194278816489143, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
+  m_PrefabInstance: {fileID: 1910081875327726707}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1504591871033361531 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1035998397421613064, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
@@ -108,6 +113,7 @@ MonoBehaviour:
   clothType: 3
   threadTargetPos: {fileID: 1644348412511957017}
   machineSymbol: {fileID: 3623007056561751089}
+  machineSymbolBorder: {fileID: 909250041858960068}
   lockUI: {fileID: 1973507652114154614}
   levelText: {fileID: 8993396758464934406}
   moneyUI: {fileID: 4719790620793425329}
