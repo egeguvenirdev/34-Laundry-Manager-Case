@@ -5,11 +5,12 @@ using UnityEngine;
 public class SewingMachineBase : MonoBehaviour
 {
     [Header("Components")]
-    public Collider col;
+    private Collider col;
     [SerializeField] public MachineRope machineRope;
 
     [Header("Properties")]
     [SerializeField] private ClothType clothType;
+    [SerializeField] private Transform threadTargetPos;
 
     [Header("Buy Interface")]
     [SerializeField] private GameObject lockUI;
@@ -37,6 +38,11 @@ public class SewingMachineBase : MonoBehaviour
     public ClothType GetClothType
     {
         get => clothType;
+    }
+
+    public Vector3 GetThreadTransform
+    {
+        get => threadTargetPos.position;
     }
 
     public void Init(int currentLevel)
@@ -82,9 +88,8 @@ public class SewingMachineBase : MonoBehaviour
 
         if (canProduce)
         {
-            StartCoroutine(ProduceClothes());
-            ActionManager.ClearRopeSelection?.Invoke();
-            Debug.Log("Clicked");
+            ActionManager.GetSelectedThread?.Invoke(this);
+            ActionManager.ClearThreadSelection?.Invoke();
         }
     }
 
@@ -118,9 +123,10 @@ public class SewingMachineBase : MonoBehaviour
     #endregion
 
     #region Produce
-    public IEnumerator ProduceClothes()
+    public IEnumerator ProduceClothes(float delay)
     {
         CanProduce = false;
+        yield return new WaitForSeconds(delay);
         machineRope.Init(produceDuration);
         yield return new WaitForSeconds(produceDuration);
         CanProduce = true;

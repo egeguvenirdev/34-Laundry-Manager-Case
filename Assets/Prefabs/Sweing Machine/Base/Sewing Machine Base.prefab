@@ -952,37 +952,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3844114567654014269}
     m_Modifications:
-    - target: {fileID: 603162495007596951, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2184511905147250351, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399898145483750856, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2618796488900761487, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 3674757354326153507, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674757354326153507, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674757354326153507, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674757354326153507, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2.21
       objectReference: {fileID: 0}
     - target: {fileID: 3674757354326153507, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1024,61 +996,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3674757354326153507, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4158103337967616921, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
       propertyPath: m_Name
       value: SweingMachine02
-      objectReference: {fileID: 0}
-    - target: {fileID: 4158103337967616921, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4167326891029429649, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4653149182917187912, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4780042148873085218, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5186668939812369475, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6287349558040708497, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7760733372704464865, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880338802090535860, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8764854729263616631, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
-      propertyPath: m_Name
-      value: Rope Cylinder
-      objectReference: {fileID: 0}
-    - target: {fileID: 8764854729263616631, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 9081228042067113032, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 9201794910397608711, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fc65246feb70422e90eb07cd1b31258, type: 3}

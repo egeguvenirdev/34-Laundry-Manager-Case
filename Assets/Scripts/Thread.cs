@@ -8,6 +8,8 @@ public class Thread : MonoBehaviour
     [Header("Selection Settings")]
     [SerializeField] private SpriteRenderer sprite;
     [SerializeField] private Transform model;
+    [SerializeField] private Collider col;
+    [SerializeField] private float placementDuration = 1f;
 
     private bool selected;
 
@@ -15,13 +17,17 @@ public class Thread : MonoBehaviour
 
     public void Init()
     {
-        ActionManager.ClearRopeSelection += OnClearRopeSelection;
+        ActionManager.ClearThreadSelection += OnClearRopeSelection;
         vibration = VibrationManager.Instance;
+        col = GetComponent<Collider>();
+        sprite.gameObject.SetActive(true);
+        col.enabled = true;
     }
 
     public void DeInit()
     {
-        ActionManager.ClearRopeSelection -= OnClearRopeSelection;
+        ActionManager.ClearThreadSelection -= OnClearRopeSelection;
+        gameObject.SetActive(false);
     }
 
     private void OnMouseDown()
@@ -32,15 +38,15 @@ public class Thread : MonoBehaviour
             return;
         }
 
-        ActionManager.ClearRopeSelection?.Invoke();
-        ActionManager.RopeSelection?.Invoke(gameObject);
+        ActionManager.ClearThreadSelection?.Invoke();
+        ActionManager.ThreadSelection?.Invoke(this);
         SelectTheThread();
     }
 
     private void SelectTheThread()
     {
         selected = true;
-        sprite.color = Color.green;    
+        sprite.color = Color.green;
         vibration.SoftVibration();
         PlayDoPunch(model);
     }
@@ -51,6 +57,21 @@ public class Thread : MonoBehaviour
         sprite.color = Color.white;
         vibration.SoftVibration();
         PlayDoPunch(model);
+    }
+
+    public float MoveToTarget(Vector3 target)
+    {
+        StartCoroutine(MoveCo(target));
+        return placementDuration;
+    }
+
+    private IEnumerator MoveCo(Vector3 target)
+    {
+        sprite.gameObject.SetActive(false);
+        col.enabled = false;
+        transform.DOMove(target, placementDuration);
+        yield return new WaitForSeconds(placementDuration);
+        DeInit();
     }
 
     private void PlayDoPunch(Transform refObject)

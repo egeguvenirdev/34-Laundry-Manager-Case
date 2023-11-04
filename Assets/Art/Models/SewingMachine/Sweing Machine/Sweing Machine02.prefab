@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8101816798856011762}
   - component: {fileID: 8051327511981650060}
   - component: {fileID: 8385109583135893127}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Needle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,6 +85,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &3604284614669707804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 350735938805830946}
+  m_Layer: 6
+  m_Name: Rope Target Pos
+  m_TagString: Untagged
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &350735938805830946
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3604284614669707804}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.118, y: 0.1124, z: -0.0549}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3674757354326153507}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4158103337967616921
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,7 +127,7 @@ GameObject:
   - component: {fileID: 3674757354326153507}
   - component: {fileID: 382955284245665414}
   - component: {fileID: 2500747408426836556}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sweing Machine02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,14 +141,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4158103337967616921}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.30400002, y: 0, z: 1.18}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.21, y: 2.21, z: 2.21}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8246924509861107541}
   - {fileID: 8101816798856011762}
   - {fileID: 5384070914420641779}
+  - {fileID: 350735938805830946}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -182,7 +214,7 @@ GameObject:
   - component: {fileID: 5384070914420641779}
   - component: {fileID: 5610223874444723945}
   - component: {fileID: 1856789942315977603}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Blank Cover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,7 +297,7 @@ GameObject:
   - component: {fileID: 640796438990401689}
   - component: {fileID: 9013243904384253788}
   - component: {fileID: 4594091544887906460}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.130
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -348,7 +380,7 @@ GameObject:
   - component: {fileID: 6138381612623948390}
   - component: {fileID: 2229161198676319303}
   - component: {fileID: 4762035673902865402}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.129
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,9 +459,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3674757354326153507}
     m_Modifications:
+    - target: {fileID: 2060750127066038110, guid: 95023fee3e109486b851e915a80083cc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2782774708742721150, guid: 95023fee3e109486b851e915a80083cc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499378057794341190, guid: 95023fee3e109486b851e915a80083cc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4714582896077044390, guid: 95023fee3e109486b851e915a80083cc, type: 3}
       propertyPath: m_Name
       value: Rope Cylinder
+      objectReference: {fileID: 0}
+    - target: {fileID: 4714582896077044390, guid: 95023fee3e109486b851e915a80083cc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151488424508382166, guid: 95023fee3e109486b851e915a80083cc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5385288104718319492, guid: 95023fee3e109486b851e915a80083cc, type: 3}
       propertyPath: m_RootOrder
@@ -474,6 +526,26 @@ PrefabInstance:
     - target: {fileID: 5385288104718319492, guid: 95023fee3e109486b851e915a80083cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016031987997177648, guid: 95023fee3e109486b851e915a80083cc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8038841523348778304, guid: 95023fee3e109486b851e915a80083cc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8673328550952661401, guid: 95023fee3e109486b851e915a80083cc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8833964430319241715, guid: 95023fee3e109486b851e915a80083cc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165998634422344850, guid: 95023fee3e109486b851e915a80083cc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95023fee3e109486b851e915a80083cc, type: 3}

@@ -61,11 +61,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
---- !u!65 &3172386679607570549 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 6489531886574288865, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
-  m_PrefabInstance: {fileID: 8505582527944331156}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3244861084811327062 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6557779578978236866, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
@@ -88,9 +83,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 294541bf63f156243851d6c63cfa15ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 3172386679607570549}
   machineRope: {fileID: 5806443951538344696}
   clothType: 2
+  threadTargetPos: {fileID: 8816351857111108606}
   lockUI: {fileID: 8641090084301553553}
   moneyUI: {fileID: 3244861084811327062}
   machineSymbol: {fileID: 6831853836704874454}
@@ -114,5 +109,10 @@ GameObject:
 --- !u!1 &8641090084301553553 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 135872804705120261, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
+  m_PrefabInstance: {fileID: 8505582527944331156}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8816351857111108606 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 887243706180207722, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
   m_PrefabInstance: {fileID: 8505582527944331156}
   m_PrefabAsset: {fileID: 0}

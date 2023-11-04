@@ -17,9 +17,11 @@ public static class ActionManager
 
 
     //Input Actions
-    public static Action<GameObject> RopeSelection { get; set; }
+    public static Action<Thread> ThreadSelection { get; set; }
 
-    public static Action ClearRopeSelection { get; set; }
+    public static Action<SewingMachineBase> GetSelectedThread { get; set; }
+
+    public static Action ClearThreadSelection { get; set; }
 
 
     //Money Actions

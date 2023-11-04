@@ -14,7 +14,7 @@ public class ObjectPooler : MonoSingleton<ObjectPooler>
     [SerializeField] private GameObject pooledObjectHolder;
 
     private List<SewingMachineBase> pooledClothes;
-    private List<GameObject> pooledThreads;
+    private List<Thread> pooledThreads;
     private List<SlideText> pooledText;
 
     private void Awake()
@@ -47,6 +47,7 @@ public class ObjectPooler : MonoSingleton<ObjectPooler>
             }
         }
 
+        pooledThreads = new List<Thread>();
         foreach (ObjectPooledItem item in threadsToPool)
         {
             for (int i = 0; i < item.amountToPool; i++)
@@ -54,7 +55,7 @@ public class ObjectPooler : MonoSingleton<ObjectPooler>
                 GameObject obj = (GameObject)Instantiate(item.objectToPool);
                 obj.transform.SetParent(pooledObjectHolder.transform);
                 obj.SetActive(false);
-                pooledThreads.Add(obj);
+                pooledThreads.Add(obj.GetComponent<Thread>());
             }
         }
     }
@@ -89,11 +90,11 @@ public class ObjectPooler : MonoSingleton<ObjectPooler>
         return null;
     }
 
-    public GameObject GetPooledRope()
+    public Thread GetPooledThread()
     {
         for (int i = pooledThreads.Count - 1; i > -1; i--)
         {
-            if (!pooledThreads[i].activeInHierarchy)
+            if (!pooledThreads[i].gameObject.activeInHierarchy)
             {
                 return pooledThreads[i];
             }
@@ -105,9 +106,10 @@ public class ObjectPooler : MonoSingleton<ObjectPooler>
             {
                 GameObject obj = (GameObject)Instantiate(item.objectToPool);
                 obj.SetActive(false);
-                pooledThreads.Add(obj);
+                Thread newThread = obj.GetComponent<Thread>();
+                pooledThreads.Add(newThread);
                 obj.transform.SetParent(pooledObjectHolder.transform);
-                return obj;
+                return newThread;
             }
         }
         return null;
