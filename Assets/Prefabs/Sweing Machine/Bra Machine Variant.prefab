@@ -82,6 +82,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 135872804705120261, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
   m_PrefabInstance: {fileID: 1910081875327726707}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &2735111206883589864 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4572535152599517851, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
+  m_PrefabInstance: {fileID: 1910081875327726707}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2831533878661937795 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4452468312461463280, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
@@ -102,12 +107,12 @@ MonoBehaviour:
   machineRope: {fileID: 4331545179969202463}
   clothType: 3
   threadTargetPos: {fileID: 1644348412511957017}
+  machineSymbol: {fileID: 3623007056561751089}
   lockUI: {fileID: 1973507652114154614}
   levelText: {fileID: 8993396758464934406}
   moneyUI: {fileID: 4719790620793425329}
   moneyText: {fileID: 1504591871033361531}
-  unlockParticle: {fileID: 0}
-  machineSymbol: {fileID: 3623007056561751089}
+  unlockParticle: {fileID: 2735111206883589864}
 --- !u!1 &3623007056561751089 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2938168712652058690, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}

@@ -118,7 +118,12 @@ MonoBehaviour:
   levelText: {fileID: 798787257715328494}
   moneyUI: {fileID: 3916789054369462873}
   moneyText: {fileID: 7150106666982896531}
-  unlockParticle: {fileID: 0}
+  unlockParticle: {fileID: 5921735785294645504}
+--- !u!198 &5921735785294645504 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4572535152599517851, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
+  m_PrefabInstance: {fileID: 7879842687285363611}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6992626083959408625 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 887243706180207722, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}

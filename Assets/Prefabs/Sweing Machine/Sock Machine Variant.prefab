@@ -110,6 +110,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aedcb1ada98812a44bd01442ad843125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!198 &8406761793086075300 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4572535152599517851, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
+  m_PrefabInstance: {fileID: 5466869884075309887}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8508532690623149519 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4452468312461463280, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
@@ -135,4 +140,4 @@ MonoBehaviour:
   levelText: {fileID: 3283465915394915658}
   moneyUI: {fileID: 1215920195262481149}
   moneyText: {fileID: 5025632614177213239}
-  unlockParticle: {fileID: 0}
+  unlockParticle: {fileID: 8406761793086075300}
