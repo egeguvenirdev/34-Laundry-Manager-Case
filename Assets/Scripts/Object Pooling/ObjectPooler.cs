@@ -13,14 +13,14 @@ public class ObjectPooler : MonoSingleton<ObjectPooler>
     [Header("Holder")]
     [SerializeField] private GameObject pooledObjectHolder;
 
-    private List<SewingMachineBase> pooledClothes;
+    private List<ClothesBase> pooledClothes;
     private List<Thread> pooledThreads;
     private List<SlideText> pooledText;
 
     private void Awake()
     {
         //produce the items
-        pooledClothes = new List<SewingMachineBase>();
+        pooledClothes = new List<ClothesBase>();
         foreach (ObjectPooledItem item in clothesToPool)
         {
             for (int i = 0; i < item.amountToPool; i++)
@@ -28,7 +28,7 @@ public class ObjectPooler : MonoSingleton<ObjectPooler>
                 GameObject obj = (GameObject)Instantiate(item.objectToPool);
                 obj.transform.SetParent(pooledObjectHolder.transform);
                 obj.SetActive(false);
-                pooledClothes.Add(obj.GetComponent<SewingMachineBase>());
+                pooledClothes.Add(obj.GetComponent<ClothesBase>());
             }
         }
 
@@ -60,12 +60,12 @@ public class ObjectPooler : MonoSingleton<ObjectPooler>
         }
     }
 
-    public SewingMachineBase GetPooledCloth(ClothType clothesType)
+    public ClothesBase GetPooledClothes(ClothType clothesType)
     {
         //search for the target item
         for (int i = pooledClothes.Count - 1; i > -1; i--)
         {
-            if (!pooledClothes[i].gameObject.activeInHierarchy && pooledClothes[i].GetClothType == clothesType)
+            if (!pooledClothes[i].gameObject.activeInHierarchy && pooledClothes[i].GetClothesType == clothesType)
             {
                 return pooledClothes[i];
             }
@@ -74,14 +74,14 @@ public class ObjectPooler : MonoSingleton<ObjectPooler>
         //if tthe pool not enough and can expand
         foreach (ObjectPooledItem item in clothesToPool)
         {
-            if (item.objectToPool.GetComponent<SewingMachineBase>().GetClothType == clothesType)
+            if (item.objectToPool.GetComponent<ClothesBase>().GetClothesType == clothesType)
             {
                 if (item.shouldExpand)
                 {
                     GameObject obj = (GameObject)Instantiate(item.objectToPool);
                     obj.transform.SetParent(pooledObjectHolder.transform);
                     obj.SetActive(false);
-                    SewingMachineBase producedCloth = obj.GetComponent<SewingMachineBase>();
+                    ClothesBase producedCloth = obj.GetComponent<ClothesBase>();
                     pooledClothes.Add(producedCloth);
                     return producedCloth;
                 }

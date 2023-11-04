@@ -26,7 +26,8 @@ public abstract class SewingMachineBase : MonoBehaviour
 
     [Header("Produce Settings")]
     [SerializeField] private SpriteRenderer machineSymbolBorder;
-    [SerializeField] private Transform producePos;
+    [SerializeField] protected Transform producePos;
+    [SerializeField] private ParticleSystem producedParticle;
     private Color white = Color.white;
     private Color green = Color.green;
 
@@ -39,7 +40,7 @@ public abstract class SewingMachineBase : MonoBehaviour
     private bool canProduce = false;
     private bool producedClothes = false;
 
-    private ObjectPooler pooler;
+    protected ObjectPooler pooler;
     private MoneyManager moneyManager;
 
     public bool CanProduce
@@ -89,7 +90,6 @@ public abstract class SewingMachineBase : MonoBehaviour
 
     protected void OnMouseDown()
     {
-        Debug.Log("Clicked");
         if (buyable && !UnlockCheck)
         {
             if (ActionManager.CheckMoneyAmount(moneyValue))
@@ -145,20 +145,33 @@ public abstract class SewingMachineBase : MonoBehaviour
     public IEnumerator ProduceClothes(float delay)
     {
         CanProduce = false;
-        StartProduce();
         yield return new WaitForSeconds(delay);
+        StartProduce();
+        Debug.Log("produce started");
         machineRope.Init(produceDuration);
         yield return new WaitForSeconds(produceDuration);
         producedClothes = true;
         PlayClothAnim();
+        PlayProduceParticle();
     }
 
-    protected abstract void StartProduce();
+    protected void StartProduce()
+    {
+        Debug.Log("Get pooled item");
+        ClothesBase produceCloth = pooler.GetPooledClothes(GetClothType);
+        produceCloth.gameObject.SetActive(true);
+        produceCloth.Init(producePos.position, produceDuration);
+    }
 
     private void PlayClothAnim()
     {
         Material spriteMat = machineSymbolBorder.material;
         TurnToGreen(spriteMat);
+    }
+
+    private void PlayProduceParticle()
+    {
+        producedParticle.Play();
     }
 
     private void TurnToGreen(Material refMat)

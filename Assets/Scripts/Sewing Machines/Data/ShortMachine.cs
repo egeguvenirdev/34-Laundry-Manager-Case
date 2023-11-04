@@ -4,8 +4,5 @@ using UnityEngine;
 
 public class ShortMachine : SewingMachineBase
 {
-    protected override void StartProduce()
-    {
 
-    }
 }

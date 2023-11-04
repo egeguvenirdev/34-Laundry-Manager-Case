@@ -57,6 +57,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
+--- !u!4 &676722238441454326 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4808167078663946697, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
+  m_PrefabInstance: {fileID: 5466869884075309887}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1215920195262481149 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6557779578978236866, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
@@ -87,6 +92,11 @@ MonoBehaviour:
 --- !u!4 &5156100691810615125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 887243706180207722, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
+  m_PrefabInstance: {fileID: 5466869884075309887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5296186706415194771 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 189692754586036652, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
   m_PrefabInstance: {fileID: 5466869884075309887}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &5349307315831130938 stripped
@@ -141,9 +151,11 @@ MonoBehaviour:
   clothType: 1
   threadTargetPos: {fileID: 5156100691810615125}
   machineSymbol: {fileID: 7140529576817199997}
-  machineSymbolBorder: {fileID: 6755837535945483656}
   lockUI: {fileID: 5349307315831130938}
   levelText: {fileID: 3283465915394915658}
   moneyUI: {fileID: 1215920195262481149}
   moneyText: {fileID: 5025632614177213239}
   unlockParticle: {fileID: 8406761793086075300}
+  machineSymbolBorder: {fileID: 6755837535945483656}
+  producePos: {fileID: 676722238441454326}
+  producedParticle: {fileID: 5296186706415194771}

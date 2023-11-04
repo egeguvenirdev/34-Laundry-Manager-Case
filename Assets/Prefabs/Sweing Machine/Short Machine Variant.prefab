@@ -72,6 +72,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &3449996284363309650 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4808167078663946697, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
+  m_PrefabInstance: {fileID: 7879842687285363611}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3916789054369462873 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6557779578978236866, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
@@ -114,12 +119,14 @@ MonoBehaviour:
   clothType: 0
   threadTargetPos: {fileID: 6992626083959408625}
   machineSymbol: {fileID: 5016072978758136793}
-  machineSymbolBorder: {fileID: 8882616258538478892}
   lockUI: {fileID: 7834122277520094110}
   levelText: {fileID: 798787257715328494}
   moneyUI: {fileID: 3916789054369462873}
   moneyText: {fileID: 7150106666982896531}
   unlockParticle: {fileID: 5921735785294645504}
+  machineSymbolBorder: {fileID: 8882616258538478892}
+  producePos: {fileID: 3449996284363309650}
+  producedParticle: {fileID: 8069113126140406327}
 --- !u!198 &5921735785294645504 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 4572535152599517851, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
@@ -144,6 +151,11 @@ MonoBehaviour:
 --- !u!1 &7834122277520094110 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 135872804705120261, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
+  m_PrefabInstance: {fileID: 7879842687285363611}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8069113126140406327 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 189692754586036652, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
   m_PrefabInstance: {fileID: 7879842687285363611}
   m_PrefabAsset: {fileID: 0}
 --- !u!212 &8882616258538478892 stripped

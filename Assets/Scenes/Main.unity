@@ -198,7 +198,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: -1, y: 11, z: 5, w: -12}
+  m_BoundingSphereOverride: {x: -2.3404263e-24, y: 2.3937171e-21, z: -3.0590932e+31, w: 28172.578}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -681,7 +681,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9365f5f5207d4084aa9955c1754778e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clothesToPool: []
+  clothesToPool:
+  - amountToPool: 10
+    objectToPool: {fileID: 3409069755919268621, guid: ad93731b5bb807c47b43cce1ec46526c, type: 3}
+    shouldExpand: 1
+  - amountToPool: 10
+    objectToPool: {fileID: 5620050678796537905, guid: db2881dc2cec15c4cbfae7612d6276c8, type: 3}
+    shouldExpand: 1
+  - amountToPool: 10
+    objectToPool: {fileID: 6086769769691134132, guid: 58bc413a5e9e38949a54d451f3aa7015, type: 3}
+    shouldExpand: 1
+  - amountToPool: 10
+    objectToPool: {fileID: 7511854614008332465, guid: fe32cfc76bdf6f040901936050de072b, type: 3}
+    shouldExpand: 1
   slideTextToPool:
   - amountToPool: 5
     objectToPool: {fileID: 5965662044040928813, guid: 818c362bc01b09a4a83feca3d7408314, type: 3}

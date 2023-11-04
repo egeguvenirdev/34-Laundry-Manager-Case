@@ -4,8 +4,5 @@ using UnityEngine;
 
 public class SockMachine : SewingMachineBase
 {
-    protected override void StartProduce()
-    {
 
-    }
 }
