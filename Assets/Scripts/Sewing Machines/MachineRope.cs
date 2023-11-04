@@ -17,11 +17,12 @@ public class MachineRope : MonoBehaviour
             ropes[i].SetActive(true);
         }
 
-        StartCoroutine(ProduceCo());
+        StartCoroutine(ProduceCo(refDuration));
     }
 
-    private IEnumerator ProduceCo()
+    private IEnumerator ProduceCo(float refDuration)
     {
+        transform.DOLocalRotate(Vector3.up * 360, duration, RotateMode.FastBeyond360).SetLoops((int)refDuration, LoopType.Restart);
         for (int i = 0; i < ropes.Length; i++)
         {
             ropes[i].transform.DOScale(Vector3.zero, duration);
