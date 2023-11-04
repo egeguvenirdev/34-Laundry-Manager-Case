@@ -54,11 +54,7 @@ public class ThreadManager : MonoBehaviour
         newThread.Init();
         threads.Add(newThread);
 
-        for (int i = 0; i < threadPlacementTransforms.Length; i++)
-        {
-            if (i >= threads.Count) return; 
-            threads[i].transform.DOMove(threadPlacementTransforms[i].position, placementDuration);
-        }
+        ReplaceThreads();
     }
 
     private void OnThreadSelection(Thread selectedThread)
@@ -76,7 +72,17 @@ public class ThreadManager : MonoBehaviour
         if(currentThread != null)
         {
             threads.Remove(currentThread);
+            ReplaceThreads();
             StartCoroutine(machine.ProduceClothes(currentThread.MoveToTarget(machine.GetThreadTransform))); 
+        }
+    }
+
+    private void ReplaceThreads()
+    {
+        for (int i = 0; i < threadPlacementTransforms.Length; i++)
+        {
+            if (i >= threads.Count) return;
+            threads[i].transform.DOMove(threadPlacementTransforms[i].position, placementDuration);
         }
     }
 }
