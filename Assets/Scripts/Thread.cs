@@ -56,7 +56,6 @@ public class Thread : MonoBehaviour
         selected = false;
         sprite.color = Color.white;
         vibration.SoftVibration();
-        PlayDoPunch(model);
     }
 
     public float MoveToTarget(Vector3 target)
