@@ -61,6 +61,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
+--- !u!114 &798787257715328494 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7372128619681908341, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
+  m_PrefabInstance: {fileID: 7879842687285363611}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3916789054369462873 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6557779578978236866, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
@@ -102,15 +113,28 @@ MonoBehaviour:
   machineRope: {fileID: 5460499172343291639}
   clothType: 0
   threadTargetPos: {fileID: 6992626083959408625}
-  lockUI: {fileID: 7834122277520094110}
-  moneyUI: {fileID: 3916789054369462873}
   machineSymbol: {fileID: 5016072978758136793}
+  lockUI: {fileID: 7834122277520094110}
+  levelText: {fileID: 798787257715328494}
+  moneyUI: {fileID: 3916789054369462873}
+  moneyText: {fileID: 7150106666982896531}
   unlockParticle: {fileID: 0}
 --- !u!4 &6992626083959408625 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 887243706180207722, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
   m_PrefabInstance: {fileID: 7879842687285363611}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7150106666982896531 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1035998397421613064, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
+  m_PrefabInstance: {fileID: 7879842687285363611}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7834122277520094110 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 135872804705120261, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}

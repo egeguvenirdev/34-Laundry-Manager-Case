@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class SewingMachineBase : MonoBehaviour
@@ -11,11 +12,15 @@ public class SewingMachineBase : MonoBehaviour
     [Header("Properties")]
     [SerializeField] private ClothType clothType;
     [SerializeField] private Transform threadTargetPos;
+    [SerializeField] private GameObject machineSymbol;
+
+    [Header("Lock Interface")]
+    [SerializeField] private GameObject lockUI;
+    [SerializeField] private TMP_Text levelText;
 
     [Header("Buy Interface")]
-    [SerializeField] private GameObject lockUI;
     [SerializeField] private GameObject moneyUI;
-    [SerializeField] private GameObject machineSymbol;
+    [SerializeField] private TMP_Text moneyText;
     [SerializeField] private ParticleSystem unlockParticle;
 
     //Machine Props
@@ -152,5 +157,8 @@ public class SewingMachineBase : MonoBehaviour
         produceDuration = machineProps.ProduceDuration;
         unlockLevel = machineProps.UnlockLevel;
         moneyValue = machineProps.MoneyValue;
+
+        levelText.text = "Level" + unlockLevel;
+        moneyText.text = moneyValue + "$";
     }
 }

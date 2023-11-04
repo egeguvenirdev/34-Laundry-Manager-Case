@@ -6,6 +6,9 @@ using DG.Tweening;
 public class MachineRope : MonoBehaviour
 {
     [SerializeField] private GameObject[] ropes;
+    [SerializeField] private Transform needle;
+    [SerializeField] private float needleY;
+    [SerializeField] private int needleSpeed;
     private float duration;
     public void Init(float refDuration)
     {
@@ -23,6 +26,8 @@ public class MachineRope : MonoBehaviour
     private IEnumerator ProduceCo(float refDuration)
     {
         transform.DOLocalRotate(Vector3.up * 360, duration, RotateMode.FastBeyond360).SetLoops((int)refDuration, LoopType.Restart);
+        needle.DOLocalMoveY(needleY, duration / needleSpeed).SetLoops((int)refDuration * needleSpeed, LoopType.Yoyo);
+
         for (int i = 0; i < ropes.Length; i++)
         {
             ropes[i].transform.DOScale(Vector3.zero, duration);

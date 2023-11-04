@@ -61,6 +61,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
+--- !u!114 &1172881855075420641 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7372128619681908341, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
+  m_PrefabInstance: {fileID: 8505582527944331156}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3244861084811327062 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6557779578978236866, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
@@ -86,9 +97,11 @@ MonoBehaviour:
   machineRope: {fileID: 5806443951538344696}
   clothType: 2
   threadTargetPos: {fileID: 8816351857111108606}
-  lockUI: {fileID: 8641090084301553553}
-  moneyUI: {fileID: 3244861084811327062}
   machineSymbol: {fileID: 6831853836704874454}
+  lockUI: {fileID: 8641090084301553553}
+  levelText: {fileID: 1172881855075420641}
+  moneyUI: {fileID: 3244861084811327062}
+  moneyText: {fileID: 8676603815435468700}
   unlockParticle: {fileID: 0}
 --- !u!114 &5806443951538344696 stripped
 MonoBehaviour:
@@ -111,6 +124,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 135872804705120261, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
   m_PrefabInstance: {fileID: 8505582527944331156}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8676603815435468700 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1035998397421613064, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
+  m_PrefabInstance: {fileID: 8505582527944331156}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8816351857111108606 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 887243706180207722, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
