@@ -17,7 +17,9 @@ public class GameManager : MonoSingleton<GameManager>
     private UIManager uIManager;
     private BandRotator bandRotator;
     private MachineManager machineManager;
+    private DyeManager dyeMachineManager;
     private ThreadManager threadManager;
+    private ClothManager clothManager;
 
     void Start()
     {
@@ -45,8 +47,14 @@ public class GameManager : MonoSingleton<GameManager>
         machineManager = FindObjectOfType<MachineManager>();
         machineManager.Init();
 
+        dyeMachineManager = FindObjectOfType<DyeManager>();
+        dyeMachineManager.Init();
+
         threadManager = FindObjectOfType<ThreadManager>();
         threadManager.Init();
+
+        clothManager = FindObjectOfType<ClothManager>();
+        clothManager.Init();
     }
 
     private void DeInits()
@@ -58,7 +66,9 @@ public class GameManager : MonoSingleton<GameManager>
         camManager.DeInit();
         bandRotator.DeInit();
         machineManager.DeInit();
+        dyeMachineManager.DeInit();
         threadManager.DeInit();
+        clothManager.DeInit();
     }
 
     public void OnStartTheGame()

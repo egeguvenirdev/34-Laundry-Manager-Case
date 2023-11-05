@@ -15,6 +15,8 @@ public static class ActionManager
 
     public static Action GainRope { get; set; }
 
+    public static Action<ClothesBase> GainClothes { get; set; }
+
     public static Action SewScreen { get; set; }
 
     public static Action DyeScreen { get; set; }
@@ -27,7 +29,8 @@ public static class ActionManager
 
     public static Action ClearThreadSelection { get; set; }
 
-    public static Action<Thread> ClothSelection { get; set; }
+
+    public static Action<ClothesBase> ClothSelection { get; set; }
 
     public static Action<DyeMachineBase> GetSelectedCloth { get; set; }
 
@@ -36,7 +39,6 @@ public static class ActionManager
 
     //Money Actions
     public static Action<float> UpdateMoney { get; set; }
-
 
     public static Action<float> UpdateMoneyMultiplier { get; set; }
 

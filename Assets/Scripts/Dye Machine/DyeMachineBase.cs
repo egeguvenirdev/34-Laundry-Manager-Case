@@ -25,8 +25,8 @@ public class DyeMachineBase : MonoBehaviour
 
     [Header("Produce Settings")]
     [SerializeField] private Image cooldownImage;
-    [SerializeField] protected Transform producePos;
     [SerializeField] private ParticleSystem producedParticle;
+    [SerializeField] private Color32 matColor;
 
     //Machine Props
     protected float produceDuration;
@@ -141,13 +141,14 @@ public class DyeMachineBase : MonoBehaviour
     #region Produce
     public IEnumerator ProduceClothes(float delay)
     {
+        producedParticle.Play();
         CanProduce = false;
         yield return new WaitForSeconds(delay);
         StartDye();
         yield return new WaitForSeconds(produceDuration);
         producedClothes = true;
         PlayClothAnim();
-        PlayProduceParticle();
+        producedParticle.Stop();
     }
 
     protected void StartDye()
@@ -161,11 +162,6 @@ public class DyeMachineBase : MonoBehaviour
     {
         DOTween.To(() => cooldown, x => cooldown = x, produceDuration, 0.5f).SetSpeedBased(false)
             .OnUpdate(() => { cooldownImage.fillAmount = cooldown / produceDuration; });
-    }
-
-    private void PlayProduceParticle()
-    {
-        producedParticle.Play();
     }
 
     public void GetClothes()

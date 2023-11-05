@@ -14,6 +14,8 @@ public class ClothesBase : MonoBehaviour
     [SerializeField] private ClothType clothType;
     [SerializeField] private float startValue;
     [SerializeField] private float endValue;
+    [SerializeField] private float placementDuration = 1f;
+
     private float currentValue;
 
     private ColorType colorType;
@@ -51,5 +53,18 @@ public class ClothesBase : MonoBehaviour
             {
                 wobbleMat.SetFloat("_Fill", currentValue);
             });
+    }
+
+    public float MoveToTarget(Vector3 target)
+    {
+        StartCoroutine(MoveCo(target));
+        return placementDuration;
+    }
+
+    private IEnumerator MoveCo(Vector3 target)
+    {
+        transform.DOMove(target, placementDuration);
+        yield return new WaitForSeconds(placementDuration);
+        DeInit();
     }
 }

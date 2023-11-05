@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4452468312461463280, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
       propertyPath: m_Name
-      value: Sock Machine Variant
+      value: Sock Machine
       objectReference: {fileID: 0}
     - target: {fileID: 8213578912249042214, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
       propertyPath: m_RootOrder
@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8213578912249042214, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.166
+      value: -0.239
       objectReference: {fileID: 0}
     - target: {fileID: 8213578912249042214, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -33,15 +33,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8213578912249042214, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8213578912249042214, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8213578912249042214, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8213578912249042214, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -60,11 +60,6 @@ PrefabInstance:
 --- !u!4 &676722238441454326 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4808167078663946697, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
-  m_PrefabInstance: {fileID: 5466869884075309887}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1215920195262481149 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6557779578978236866, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
   m_PrefabInstance: {fileID: 5466869884075309887}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &3283465915394915658 stripped
@@ -153,7 +148,7 @@ MonoBehaviour:
   machineSymbol: {fileID: 7140529576817199997}
   lockUI: {fileID: 5349307315831130938}
   levelText: {fileID: 3283465915394915658}
-  moneyUI: {fileID: 1215920195262481149}
+  moneyUI: {fileID: 0}
   moneyText: {fileID: 5025632614177213239}
   unlockParticle: {fileID: 8406761793086075300}
   machineSymbolBorder: {fileID: 6755837535945483656}

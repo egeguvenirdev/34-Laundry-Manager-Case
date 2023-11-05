@@ -61,6 +61,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
+--- !u!198 &72125870851847831 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4572535152599517851, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
+  m_PrefabInstance: {fileID: 4500457662744574988}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &269809370192278268 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4452468312461463280, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
@@ -78,15 +83,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfb7aedde83e7134e818040fdc58b252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  machineRope: {fileID: 0}
-  colorType: 0
-  threadTargetPos: {fileID: 0}
-  machineSymbol: {fileID: 0}
-  lockUI: {fileID: 0}
-  levelText: {fileID: 0}
-  moneyUI: {fileID: 0}
-  moneyText: {fileID: 0}
-  unlockParticle: {fileID: 0}
+  colorType: 1
+  clothTargetPos: {fileID: 8993367526824820165}
+  lockUI: {fileID: 4581957417826683913}
+  levelText: {fileID: 6357914501868862073}
+  moneyUI: {fileID: 7310819586845033934}
+  moneyText: {fileID: 3464479139214609412}
+  unlockParticle: {fileID: 72125870851847831}
   cooldownImage: {fileID: 0}
-  producePos: {fileID: 0}
   producedParticle: {fileID: 0}
+  matColor:
+    serializedVersion: 2
+    rgba: 4292921657
+--- !u!114 &3464479139214609412 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1035998397421613064, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
+  m_PrefabInstance: {fileID: 4500457662744574988}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &4581957417826683913 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 135872804705120261, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
+  m_PrefabInstance: {fileID: 4500457662744574988}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6357914501868862073 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7372128619681908341, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
+  m_PrefabInstance: {fileID: 4500457662744574988}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &7310819586845033934 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6557779578978236866, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
+  m_PrefabInstance: {fileID: 4500457662744574988}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8993367526824820165 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4808167078663946697, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
+  m_PrefabInstance: {fileID: 4500457662744574988}
+  m_PrefabAsset: {fileID: 0}

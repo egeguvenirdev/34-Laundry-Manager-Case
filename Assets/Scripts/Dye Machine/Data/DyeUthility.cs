@@ -9,18 +9,18 @@ public class DyeUthility : MonoBehaviour
     {
         {
             ColorType.Blue1,
-            new DyeConfig(7.5f, 1, 100f)
+            new DyeConfig(7.5f, 1, 0)
         },
         {
             ColorType.Blue2,
             new DyeConfig(12f, 2, 150f)
         },
         {
-            ColorType.Blue2,
+            ColorType.Green1,
             new DyeConfig(20f, 4, 250f)
         },
         {
-            ColorType.Blue2,
+            ColorType.Green2,
             new DyeConfig(32f, 6, 500f)
         }
     };

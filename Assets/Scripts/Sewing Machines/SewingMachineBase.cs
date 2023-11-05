@@ -42,6 +42,7 @@ public abstract class SewingMachineBase : MonoBehaviour
 
     protected ObjectPooler pooler;
     private MoneyManager moneyManager;
+    private ClothesBase produceCloth;
 
     public bool CanProduce
     {
@@ -133,7 +134,7 @@ public abstract class SewingMachineBase : MonoBehaviour
     protected void UnlockTheMachine()
     {
         CanProduce = true;
-        unlockParticle.Play();
+        if (moneyUI != null) unlockParticle.Play();
         if (moneyUI != null) moneyUI.SetActive(false);
         UnlockCheck = true;
         machineSymbol.SetActive(true);
@@ -158,7 +159,7 @@ public abstract class SewingMachineBase : MonoBehaviour
     protected void StartProduce()
     {
         Debug.Log("Get pooled item");
-        ClothesBase produceCloth = pooler.GetPooledClothes(GetClothType);
+        produceCloth = pooler.GetPooledClothes(GetClothType);
         produceCloth.gameObject.SetActive(true);
         produceCloth.Init(producePos.position, produceDuration);
     }
@@ -191,6 +192,8 @@ public abstract class SewingMachineBase : MonoBehaviour
         DOTween.KillAll();
         Material spriteMat = machineSymbolBorder.material;
         spriteMat.DOColor(white, 0);
+        ActionManager.GainClothes?.Invoke(produceCloth);
+        produceCloth = null;
     }
     #endregion
 
