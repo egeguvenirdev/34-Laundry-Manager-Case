@@ -81,7 +81,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wobbleRenderer: {fileID: 1911043880302026706}
   clothMoneyValue: 100
-  money: 0
+  money: 100
   clothType: 1
   startValue: 0.1
   endValue: 0.19
