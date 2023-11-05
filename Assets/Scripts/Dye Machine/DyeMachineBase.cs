@@ -27,6 +27,7 @@ public class DyeMachineBase : MonoBehaviour
     [Header("Produce Settings")]
     [SerializeField] private Image cooldownImage;
     [SerializeField] private ParticleSystem producedParticle;
+    [SerializeField] private ParticleSystem producedParticleSmoke;
     [SerializeField] private Color matColor;
 
     //Machine Props
@@ -164,6 +165,7 @@ public class DyeMachineBase : MonoBehaviour
         //col.enabled = true;
         PlayClothAnim();
         producedParticle.Stop();
+        producedParticleSmoke.Play();
     }
 
     private void PlayClothAnim()

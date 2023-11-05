@@ -69,6 +69,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1370453115190247519, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4452468312461463280, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
       propertyPath: m_Name
       value: Blue 1  Machine Variant
@@ -144,6 +148,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!198 &5238654327886444394 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1370453115204470549, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
+  m_PrefabInstance: {fileID: 6608930765045297279}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &6185474797122388087 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1035998397421613064, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
@@ -192,6 +201,7 @@ MonoBehaviour:
   unlockParticle: {fileID: 7260730575693200100}
   cooldownImage: {fileID: 0}
   producedParticle: {fileID: 3403633716482345800}
+  producedParticleSmoke: {fileID: 5238654327886444394}
   matColor: {r: 0.09019608, g: 0.50980395, b: 0.8431373, a: 1}
 --- !u!114 &8818937221229467398 stripped
 MonoBehaviour:
