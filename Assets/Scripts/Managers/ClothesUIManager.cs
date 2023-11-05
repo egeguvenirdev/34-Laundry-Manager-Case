@@ -24,13 +24,25 @@ public class ClothesUIManager : MonoBehaviour
         uis.Clear();
     }
 
-    public void InstantiateClothesUI(ColorType uiColor, Sprite uiImage)
+    public void InstantiateClothesUI(ColorType uiColor, Sprite uiImage, ClothType clothType, ColorType colorType)
     {
         ClothesUI newUI = Instantiate(uiBase).GetComponent<ClothesUI>();
         newUI.transform.parent = transform;
         newUI.transform.localScale = Vector3.one;
-        newUI.Init(GetColor(uiColor), uiImage);
+        newUI.Init(GetColor(uiColor), uiImage, clothType, colorType);
         uis.Add(newUI);
+    }
+
+    public Transform CheckList(ClothesBase refCloth)
+    {
+        for (int i = 0; i < uis.Count; i++)
+        {
+            if (refCloth.ClothesColorType == uis[i].GetColorType && refCloth.GetClothesType == uis[i].GetClothType)
+            {
+                return uis[i].transform;
+            }
+        }
+        return null;
     }
 
     private Color GetColor(ColorType type)

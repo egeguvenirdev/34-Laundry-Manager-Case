@@ -16,5 +16,6 @@ public class LevelProps : ScriptableObject
         [Header("Stats")]
         public Sprite image;
         public ColorType colorType;
+        public ClothType clothType;
     }
 }

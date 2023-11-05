@@ -13,7 +13,11 @@ public class LevelPropsManager : MonoBehaviour
 
         for (int i = 0; i < level.GetLevelPrefs.Length; i++)
         {
-            clothesManager.InstantiateClothesUI(level.GetLevelPrefs[i].colorType, level.GetLevelPrefs[i].image);
+            clothesManager.InstantiateClothesUI(
+                level.GetLevelPrefs[i].colorType, 
+                level.GetLevelPrefs[i].image, 
+                level.GetLevelPrefs[i].clothType, 
+                level.GetLevelPrefs[i].colorType);
         }
     }
 }
