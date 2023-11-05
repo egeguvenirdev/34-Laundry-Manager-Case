@@ -101,9 +101,9 @@ public class ClothesBase : MonoBehaviour
         vibration.SoftVibration();
     }
 
-    public float MoveToTarget(Vector3 target)
+    public float StartDyeProcess(Vector3 target, Color targetColor, float duration)
     {
-        StartCoroutine(MoveCo(target));
+        StartCoroutine(DyeCo(target, targetColor, duration));
         return placementDuration;
     }
 
@@ -121,13 +121,19 @@ public class ClothesBase : MonoBehaviour
         });
     }
 
-    private IEnumerator MoveCo(Vector3 target)
+    private IEnumerator DyeCo(Vector3 target, Color targetColor, float duration)
     {
         transform.DOMove(target, placementDuration);
         sprite.gameObject.SetActive(false);
         col.enabled = false;
         yield return new WaitForSeconds(placementDuration);
 
+        Color currentColor = wobbleMat.GetColor("_SideColor");
+        DOVirtual.Color(currentColor, targetColor, duration, (value) =>
+        {
+            wobbleMat.SetColor("_SideColor", value);
+            wobbleMat.SetColor("_TopColor", value);
+        });
         //DeInit();
     }
 

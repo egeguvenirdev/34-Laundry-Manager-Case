@@ -61,7 +61,7 @@ public class ClothManager : MonoBehaviour
         {
             clothes.Remove(currentCloth);
             ReplaceClothes();
-            StartCoroutine(machine.ProduceClothes(currentCloth.MoveToTarget(machine.GetThreadTransform)));
+            StartCoroutine(machine.ProduceClothes(currentCloth.StartDyeProcess(machine.GetThreadTransform, machine.GetColor, machine.GetPaintDuration)));
         }
     }
 

@@ -26,7 +26,7 @@ public class DyeMachineBase : MonoBehaviour
     [Header("Produce Settings")]
     [SerializeField] private Image cooldownImage;
     [SerializeField] private ParticleSystem producedParticle;
-    [SerializeField] private Color32 matColor;
+    [SerializeField] private Color matColor;
 
     //Machine Props
     protected float produceDuration;
@@ -52,6 +52,16 @@ public class DyeMachineBase : MonoBehaviour
         get => colorType;
     }
 
+    public Color GetColor
+    {
+        get => matColor;
+    }
+
+    public float GetPaintDuration
+    {
+        get => produceDuration;
+    }
+
     public Vector3 GetThreadTransform
     {
         get => clothTargetPos.position;
@@ -62,6 +72,7 @@ public class DyeMachineBase : MonoBehaviour
         col = GetComponent<Collider>();
         pooler = ObjectPooler.Instance;
         SetProperties();
+        producedParticle.Stop();
 
         if (currentLevel >= unlockLevel)
         {

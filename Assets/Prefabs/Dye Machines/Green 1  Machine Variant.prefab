@@ -196,6 +196,4 @@ MonoBehaviour:
   unlockParticle: {fileID: 8715858777260025273}
   cooldownImage: {fileID: 0}
   producedParticle: {fileID: 7035365207804559041}
-  matColor:
-    serializedVersion: 2
-    rgba: 4282759293
+  matColor: {r: 0.44705886, g: 0.6666667, b: 0.25490198, a: 1}
