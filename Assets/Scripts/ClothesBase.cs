@@ -51,7 +51,7 @@ public class ClothesBase : MonoBehaviour
         clothesUIManager = FindObjectOfType<ClothesUIManager>();
         cam = Camera.main;
         vibration = VibrationManager.Instance;
-
+        vibration.SoftVibration();
         swapButton = FindObjectOfType<StageSwapperButton>();
         colorType = ColorType.nullColor;
         wobbleMat = wobbleRenderer.material;
@@ -137,7 +137,7 @@ public class ClothesBase : MonoBehaviour
         target.z = (transform.position - cam.transform.position).z;
         Vector3 result = cam.ScreenToWorldPoint(target);
 
-        transform.DOMove(result, 0.75f).OnComplete(() => 
+        transform.DOMove(result, 0.75f).OnComplete(() =>
         {
             ActionManager.GainClothes?.Invoke(this);
             sprite.gameObject.SetActive(true);
@@ -148,6 +148,7 @@ public class ClothesBase : MonoBehaviour
     private IEnumerator DyeCo(Transform target, Color targetColor, float duration)
     {
         transform.DOMove(target.position, placementDuration);
+        vibration.SoftVibration();
         sprite.gameObject.SetActive(false);
         col.enabled = false;
         yield return new WaitForSeconds(placementDuration);
@@ -158,6 +159,7 @@ public class ClothesBase : MonoBehaviour
         {
             wobbleMat.SetColor("_SideColor", value);
             wobbleMat.SetColor("_TopColor", value);
+            vibration.SoftVibration();
         });
 
         yield return new WaitForSeconds(duration);
@@ -172,7 +174,8 @@ public class ClothesBase : MonoBehaviour
     {
         Transform targetUI = clothesUIManager.CheckList(this);
         ActionManager.SelledClothesType?.Invoke(colorType);
-        if(targetUI == null)
+        vibration.SoftVibration();
+        if (targetUI == null)
         {
             InstaSell(UIManager.Instance.GetMoneyUiTransform);
             return;
