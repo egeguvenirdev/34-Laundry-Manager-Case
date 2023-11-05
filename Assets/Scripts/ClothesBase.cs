@@ -16,13 +16,22 @@ public class ClothesBase : MonoBehaviour
     [SerializeField] private float endValue;
     private float currentValue;
 
+    private ColorType colorType;
+
     public ClothType GetClothesType
     {
         get => clothType;
     }
 
+    public ColorType ClothesColorType
+    {
+        get => colorType;
+        set => colorType = value;
+    }
+
     public void Init(Vector3 instantiatePos, float produceDuration)
     {
+        colorType = ColorType.nullColor;
         wobbleMat = wobbleRenderer.material;
         wobbleMat.SetFloat("_Fill", 0);
         transform.position = instantiatePos;

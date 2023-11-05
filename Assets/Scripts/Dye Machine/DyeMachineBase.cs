@@ -152,9 +152,9 @@ public class DyeMachineBase : MonoBehaviour
 
     protected void StartDye()
     {
-        ClothesBase produceCloth = pooler.GetPooledClothes(GetClothType);
+        /*ClothesBase produceCloth = pooler.GetPooledClothes(GetClothType);
         produceCloth.gameObject.SetActive(true);
-        produceCloth.Init(producePos.position, produceDuration);
+        produceCloth.Init(producePos.position, produceDuration);*/
     }
 
     private void PlayClothAnim()
