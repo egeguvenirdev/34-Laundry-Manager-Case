@@ -20,7 +20,9 @@ public class ClothesBase : MonoBehaviour
     [SerializeField] private SpriteRenderer sprite;
     [SerializeField] private Transform model;
     [SerializeField] private Collider col;
+
     private bool selected;
+    private bool painted;
 
     private StageSwapperButton swapButton;
     private VibrationManager vibration;
@@ -46,12 +48,16 @@ public class ClothesBase : MonoBehaviour
 
         cam = Camera.main;
         vibration = VibrationManager.Instance;
-        swapButton = FindObjectOfType<StageSwapperButton>();
 
+        swapButton = FindObjectOfType<StageSwapperButton>();
         colorType = ColorType.nullColor;
         wobbleMat = wobbleRenderer.material;
         wobbleMat.SetFloat("_Fill", 0);
+
         transform.position = instantiatePos;
+        transform.parent = null;
+        painted = false;
+
         StartProducing(produceDuration);
     }
 
@@ -75,6 +81,13 @@ public class ClothesBase : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (painted)
+        {
+            ActionManager.SellTheClothes?.Invoke(this);
+            painted = false;
+            return;
+        }
+
         if (selected)
         {
             OnClearRopeSelection();
@@ -101,7 +114,7 @@ public class ClothesBase : MonoBehaviour
         vibration.SoftVibration();
     }
 
-    public float StartDyeProcess(Vector3 target, Color targetColor, float duration)
+    public float StartDyeProcess(Transform target, Color targetColor, float duration)
     {
         StartCoroutine(DyeCo(target, targetColor, duration));
         return placementDuration;
@@ -121,12 +134,13 @@ public class ClothesBase : MonoBehaviour
         });
     }
 
-    private IEnumerator DyeCo(Vector3 target, Color targetColor, float duration)
+    private IEnumerator DyeCo(Transform target, Color targetColor, float duration)
     {
-        transform.DOMove(target, placementDuration);
+        transform.DOMove(target.position, placementDuration);
         sprite.gameObject.SetActive(false);
         col.enabled = false;
         yield return new WaitForSeconds(placementDuration);
+        transform.parent = target;
 
         Color currentColor = wobbleMat.GetColor("_SideColor");
         DOVirtual.Color(currentColor, targetColor, duration, (value) =>
@@ -134,7 +148,23 @@ public class ClothesBase : MonoBehaviour
             wobbleMat.SetColor("_SideColor", value);
             wobbleMat.SetColor("_TopColor", value);
         });
+
+        yield return new WaitForSeconds(duration);
+
         //DeInit();
+    }
+
+    public void SellTheClothes(Vector3 target)
+    {
+        target.z = (transform.position - cam.transform.position).z;
+        Vector3 result = cam.ScreenToWorldPoint(target);
+
+        transform.DOMove(result, 0.75f).OnComplete(() =>
+        {
+            ActionManager.GainClothes?.Invoke(this);
+            sprite.gameObject.SetActive(true);
+            col.enabled = true;
+        });
     }
 
     private void PlayDoPunch(Transform refObject)

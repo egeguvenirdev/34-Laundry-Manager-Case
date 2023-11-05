@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class DyeMachineBase : MonoBehaviour
 {
     [Header("Components")]
+    [SerializeField] private ClothesRotator rotator;
     private Collider col;
 
     [Header("Properties")]
@@ -62,9 +63,9 @@ public class DyeMachineBase : MonoBehaviour
         get => produceDuration;
     }
 
-    public Vector3 GetThreadTransform
+    public Transform GetClothesTransform
     {
-        get => clothTargetPos.position;
+        get => clothTargetPos;
     }
 
     public void Init(int currentLevel)
@@ -156,6 +157,7 @@ public class DyeMachineBase : MonoBehaviour
         yield return new WaitForSeconds(delay);
         producedParticle.Play();
         StartDye();
+        rotator.Init(produceDuration);
         yield return new WaitForSeconds(produceDuration);
         producedClothes = true;
         PlayClothAnim();

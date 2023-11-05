@@ -182,6 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 212b80d0813133b45af91c941d0aa088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotator: {fileID: 8818937221229467398}
   colorType: 0
   clothTargetPos: {fileID: 1805285909802971574}
   lockUI: {fileID: 6509130944521781370}
@@ -192,3 +193,14 @@ MonoBehaviour:
   cooldownImage: {fileID: 0}
   producedParticle: {fileID: 3403633716482345800}
   matColor: {r: 0.09019608, g: 0.50980395, b: 0.8431373, a: 1}
+--- !u!114 &8818937221229467398 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2437726329818752889, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
+  m_PrefabInstance: {fileID: 6608930765045297279}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ab7b360e4d00540b433f71ad05873e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

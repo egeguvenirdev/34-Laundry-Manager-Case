@@ -9,6 +9,7 @@ public class UIManager : MonoSingleton<UIManager>
 {
     [Header("Panels")]
     [SerializeField] private List<ButtonBase> panels = new List<ButtonBase>();
+    [SerializeField] private ClothesUIManager clothesManager;
 
     [Header("Level & Money")]
     [SerializeField] private TMP_Text currentLV;
@@ -36,9 +37,10 @@ public class UIManager : MonoSingleton<UIManager>
 
     public void DeInit()
     {
+        clothesManager.DeInit();
         for (int i = 0; i < panels.Count; i++)
         {
-            //panels[i].DeInit();
+            panels[i].DeInit();
         }
     }
 

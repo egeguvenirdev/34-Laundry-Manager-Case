@@ -165,6 +165,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7373677033308883035 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2437726329818752889, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
+  m_PrefabInstance: {fileID: 5152147796599746338}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ab7b360e4d00540b433f71ad05873e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &8715858777260025273 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 4572535152599517851, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
@@ -187,6 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91a5d81c1d27d2a4886e29d8fe2c5a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotator: {fileID: 7373677033308883035}
   colorType: 2
   clothTargetPos: {fileID: 376632640416886507}
   lockUI: {fileID: 5071805827228507943}

@@ -196,6 +196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4296301726096805962}
   - component: {fileID: 4296301726096805963}
+  - component: {fileID: 6167143128088406676}
   m_Layer: 0
   m_Name: Level 1
   m_TagString: Untagged
@@ -241,6 +242,19 @@ MonoBehaviour:
     fontSize: 12
     fontColor: {r: 1, g: 1, b: 1, a: 1}
     dropShadow: 1
+--- !u!114 &6167143128088406676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4296301726096805964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de7aae6b76a3284287e6445556b859a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: {fileID: 11400000, guid: 2a5b83420adb0034897cf5638c9e1d5c, type: 2}
 --- !u!1 &9004363771938850589
 GameObject:
   m_ObjectHideFlags: 0

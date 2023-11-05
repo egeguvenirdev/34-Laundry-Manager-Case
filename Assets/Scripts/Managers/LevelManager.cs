@@ -10,6 +10,7 @@ public class LevelManager : MonoSingleton<LevelManager>
     [SerializeField] private bool forceLevel;
     [SerializeField] private int forceLevelIndex;
     private GameObject currentLevel;
+    private LevelPropsManager levelProps;
 
     public int LevelIndex
     {
@@ -41,16 +42,20 @@ public class LevelManager : MonoSingleton<LevelManager>
         if (forceLevel)
         {
             currentLevel = Instantiate(levelPrefabs[forceLevelIndex]);
+            currentLevel.GetComponent<LevelPropsManager>().SetLevelPropsUI();
             return;
         }
 
         if (LevelIndex >= levelPrefabs.Length)
         {
-            currentLevel = Instantiate(levelPrefabs[Random.Range(0, levelPrefabs.Length)]);
+            int randomNumber = Random.Range(0, levelPrefabs.Length);
+            currentLevel = Instantiate(levelPrefabs[randomNumber]);
+            currentLevel.GetComponent<LevelPropsManager>().SetLevelPropsUI();
             return;
         }
 
         currentLevel = Instantiate(levelPrefabs[LevelIndex]);
+        currentLevel.GetComponent<LevelPropsManager>().SetLevelPropsUI();
     }
 
     public void LevelUp()

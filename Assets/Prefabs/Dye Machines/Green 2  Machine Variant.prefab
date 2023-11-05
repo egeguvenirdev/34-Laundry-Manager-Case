@@ -78,6 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c39c4004f3b575f4692310f1ba72c22d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotator: {fileID: 1753856868819359916}
   colorType: 3
   clothTargetPos: {fileID: 8878972913522572828}
   lockUI: {fileID: 4062474674787340240}
@@ -93,6 +94,17 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 4572535152599517851, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
   m_PrefabInstance: {fileID: 4144007277745930197}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1753856868819359916 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2437726329818752889, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
+  m_PrefabInstance: {fileID: 4144007277745930197}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ab7b360e4d00540b433f71ad05873e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4027031312393932765 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1035998397421613064, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}

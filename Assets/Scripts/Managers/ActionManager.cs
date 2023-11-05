@@ -36,6 +36,8 @@ public static class ActionManager
 
     public static Action ClearClothSelection { get; set; }
 
+    public static Action<ClothesBase> SellTheClothes { get; set; }
+
 
     //Money Actions
     public static Action<float> UpdateMoney { get; set; }
