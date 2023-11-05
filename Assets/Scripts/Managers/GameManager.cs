@@ -56,7 +56,6 @@ public class GameManager : MonoSingleton<GameManager>
 
     private void DeInits()
     {
-        levelManager.DeInit();
         uIManager.DeInit();
         updateManager.DeInit();
         playerManager.DeInit();
@@ -77,20 +76,20 @@ public class GameManager : MonoSingleton<GameManager>
     public void OnLevelSucceed()
     {
         levelManager.LevelUp();
+        levelManager.DeInit();
         DeInits();
         SetInits();
     }
 
     public void OnLevelFailed()
     {
+        levelManager.DeInit();
         DeInits();
         SetInits();
     }
 
     public void FinishTheGame(bool check)
     {
-        playerManager.DeInit();
-
         if (check)
         {
             ActionManager.GameEnd?.Invoke(true);

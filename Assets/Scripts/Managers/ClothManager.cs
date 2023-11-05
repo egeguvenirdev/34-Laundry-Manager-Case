@@ -30,6 +30,7 @@ public class ClothManager : MonoBehaviour
         ActionManager.ClothSelection -= OnClothesSelection;
         ActionManager.ClearClothSelection -= OnClearClothesSelection;
         ActionManager.GetSelectedCloth -= OnGetSelectedClothes;
+        ActionManager.CloseProducedClothes.Invoke();
 
         for (int i = 0; i < clothes.Count; i++)
         {

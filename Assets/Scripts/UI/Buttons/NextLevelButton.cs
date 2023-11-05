@@ -11,6 +11,7 @@ public class NextLevelButton : ButtonBase
     {
         ActionManager.GameEnd += OnGameEnd;
         gameManager = GameManager.Instance;
+        Debug.Log("Next level");
     }
 
     public override void DeInit()
@@ -29,6 +30,6 @@ public class NextLevelButton : ButtonBase
     public override void OnButtonClick()
     {
         gameManager.OnLevelSucceed();
-        gameObject.SetActive(false);
+        panelElements.SetActive(false);
     }
 }

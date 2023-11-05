@@ -21,6 +21,8 @@ public static class ActionManager
 
     public static Action DyeScreen { get; set; }
 
+    public static Action CloseProducedClothes { get; set; }
+
 
     //Input Actions
     public static Action<Thread> ThreadSelection { get; set; }

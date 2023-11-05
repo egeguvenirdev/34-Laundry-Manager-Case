@@ -518,7 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f654dcec1d9ab64091f4109bca8cb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clearPlayerPrefs: 1
+  clearPlayerPrefs: 0
 --- !u!4 &2439711951445738199
 Transform:
   m_ObjectHideFlags: 0

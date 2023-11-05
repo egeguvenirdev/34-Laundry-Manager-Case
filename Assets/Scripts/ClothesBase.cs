@@ -47,6 +47,7 @@ public class ClothesBase : MonoBehaviour
     public void Init(Vector3 instantiatePos, float produceDuration)
     {
         ActionManager.ClearClothSelection += OnClearRopeSelection;
+        ActionManager.CloseProducedClothes += DeInit;
         clothesUIManager = FindObjectOfType<ClothesUIManager>();
         cam = Camera.main;
         vibration = VibrationManager.Instance;
@@ -66,8 +67,10 @@ public class ClothesBase : MonoBehaviour
     public void DeInit()
     {
         ActionManager.ClearClothSelection -= OnClearRopeSelection;
+        ActionManager.CloseProducedClothes -= DeInit;
         sprite.gameObject.SetActive(false);
         sprite.color = Color.white;
+        transform.parent = ObjectPooler.Instance.transform;
         gameObject.SetActive(false);
     }
 
