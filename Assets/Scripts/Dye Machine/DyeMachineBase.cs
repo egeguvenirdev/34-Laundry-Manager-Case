@@ -141,7 +141,7 @@ public class DyeMachineBase : MonoBehaviour
     #region Produce
     public IEnumerator ProduceClothes(float delay)
     {
-        producedParticle.Play();
+        //producedParticle.Play();
         CanProduce = false;
         yield return new WaitForSeconds(delay);
         StartDye();

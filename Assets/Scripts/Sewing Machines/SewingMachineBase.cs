@@ -192,7 +192,7 @@ public abstract class SewingMachineBase : MonoBehaviour
         DOTween.KillAll();
         Material spriteMat = machineSymbolBorder.material;
         spriteMat.DOColor(white, 0);
-        ActionManager.GainClothes?.Invoke(produceCloth);
+        produceCloth.MoveToUITarget();
         produceCloth = null;
     }
     #endregion

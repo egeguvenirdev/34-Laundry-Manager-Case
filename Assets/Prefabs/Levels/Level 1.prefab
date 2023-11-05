@@ -587,6 +587,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5843604930468469436}
     m_Modifications:
+    - target: {fileID: 4648989347309718018, guid: f9c69a10de531be44856ce0aec878c7f, type: 3}
+      propertyPath: m_Name
+      value: Cloth Transforms
+      objectReference: {fileID: 0}
+    - target: {fileID: 4648989347309718019, guid: f9c69a10de531be44856ce0aec878c7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.064
+      objectReference: {fileID: 0}
     - target: {fileID: 4648989347551735020, guid: f9c69a10de531be44856ce0aec878c7f, type: 3}
       propertyPath: m_RootOrder
       value: 1
