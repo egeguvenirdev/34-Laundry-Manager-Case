@@ -41,7 +41,6 @@ public class ClothesUIManager : MonoBehaviour
             {
                 ClothesUI selectedUi = uis[i];
                 uis.Remove(selectedUi);
-                Debug.Log(uis.Count);
                 if (uis.Count == 0) GameManager.Instance.FinishTheGame(true);
                 return selectedUi.transform;
             }

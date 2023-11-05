@@ -80,7 +80,9 @@ public class ClothesBase : MonoBehaviour
         col.enabled = false;
         wobbleMat.SetColor("_SideColor", new Color32(125, 125, 125, 255));
         wobbleMat.SetColor("_TopColor", new Color32(125, 125, 125, 255));
-        DOTween.To(() => currentValue, x => currentValue = x, endValue, duration)
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+        DOTween.To(() => currentValue, x => currentValue = x, startValue, 0);
+        DOTween.To(() => currentValue, x => currentValue = x, endValue, duration).SetSpeedBased(false)
             .OnUpdate(() =>
             {
                 wobbleMat.SetFloat("_Fill", currentValue);

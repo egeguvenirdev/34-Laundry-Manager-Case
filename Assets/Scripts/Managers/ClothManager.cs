@@ -26,6 +26,7 @@ public class ClothManager : MonoBehaviour
 
     public void DeInit()
     {
+        ActionManager.CloseProducedClothes?.Invoke();
         ActionManager.GainClothes -= OnEarnClothes;
         ActionManager.ClothSelection -= OnClothesSelection;
         ActionManager.ClearClothSelection -= OnClearClothesSelection;

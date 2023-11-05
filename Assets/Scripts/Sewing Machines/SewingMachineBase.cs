@@ -41,7 +41,6 @@ public abstract class SewingMachineBase : MonoBehaviour
     private bool producedClothes = false;
 
     protected ObjectPooler pooler;
-    private MoneyManager moneyManager;
     private ClothesBase produceCloth;
 
     public bool CanProduce
@@ -153,7 +152,6 @@ public abstract class SewingMachineBase : MonoBehaviour
         CanProduce = false;
         yield return new WaitForSeconds(delay);
         StartProduce();
-        Debug.Log("produce started");
         machineRope.Init(produceDuration);
         yield return new WaitForSeconds(produceDuration);
         producedClothes = true;
@@ -163,7 +161,6 @@ public abstract class SewingMachineBase : MonoBehaviour
 
     protected void StartProduce()
     {
-        Debug.Log("Get pooled item");
         produceCloth = pooler.GetPooledClothes(GetClothType);
         produceCloth.gameObject.SetActive(true);
         produceCloth.Init(producePos.position, produceDuration);

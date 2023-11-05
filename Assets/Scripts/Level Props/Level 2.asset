@@ -17,8 +17,11 @@ MonoBehaviour:
     colorType: 0
     clothType: 1
   - image: {fileID: 21300000, guid: 9d894e190daea4768aec27190ec8c10b, type: 3}
-    colorType: 1
+    colorType: 0
     clothType: 1
   - image: {fileID: 21300000, guid: 9d894e190daea4768aec27190ec8c10b, type: 3}
-    colorType: 1
+    colorType: 0
+    clothType: 1
+  - image: {fileID: 21300000, guid: 9d894e190daea4768aec27190ec8c10b, type: 3}
+    colorType: 0
     clothType: 1

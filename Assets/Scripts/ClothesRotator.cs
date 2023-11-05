@@ -9,6 +9,7 @@ public class ClothesRotator : MonoBehaviour
 
     public void Init(float refDuration)
     {
-        transform.DOLocalRotate(Vector3.up * 360, refDuration / rotateCount, RotateMode.FastBeyond360).SetLoops(rotateCount, LoopType.Restart);
+        transform.localRotation = Quaternion.Euler(0, 0, 0);
+        transform.DOLocalRotate(Vector3.up * 360, 1, RotateMode.FastBeyond360).SetLoops((int)refDuration, LoopType.Restart);
     }
 }

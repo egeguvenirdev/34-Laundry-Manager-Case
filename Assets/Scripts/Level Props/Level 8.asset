@@ -35,9 +35,6 @@ MonoBehaviour:
     colorType: 0
     clothType: 3
   - image: {fileID: 21300000, guid: 416067fa297e64842be01c0172c22968, type: 3}
-    colorType: 0
-    clothType: 3
-  - image: {fileID: 21300000, guid: 416067fa297e64842be01c0172c22968, type: 3}
     colorType: 1
     clothType: 3
   - image: {fileID: 21300000, guid: 9d894e190daea4768aec27190ec8c10b, type: 3}
@@ -46,6 +43,9 @@ MonoBehaviour:
   - image: {fileID: 21300000, guid: b3a787b0df1ae4bc28b989983fc288b0, type: 3}
     colorType: 0
     clothType: 2
+  - image: {fileID: 21300000, guid: 416067fa297e64842be01c0172c22968, type: 3}
+    colorType: 0
+    clothType: 3
   - image: {fileID: 21300000, guid: 416067fa297e64842be01c0172c22968, type: 3}
     colorType: 2
     clothType: 3

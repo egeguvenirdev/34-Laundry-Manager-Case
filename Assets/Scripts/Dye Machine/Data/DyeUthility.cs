@@ -13,15 +13,15 @@ public class DyeUthility : MonoBehaviour
         },
         {
             ColorType.Blue2,
-            new DyeConfig(12f, 2, 150f)
+            new DyeConfig(12f, 3, 150f)
         },
         {
             ColorType.Green1,
-            new DyeConfig(20f, 4, 250f)
+            new DyeConfig(20f, 5, 250f)
         },
         {
             ColorType.Green2,
-            new DyeConfig(32f, 6, 500f)
+            new DyeConfig(32f, 7, 500f)
         }
     };
 
