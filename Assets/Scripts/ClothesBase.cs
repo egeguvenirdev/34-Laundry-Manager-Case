@@ -78,6 +78,8 @@ public class ClothesBase : MonoBehaviour
     {
         currentValue = startValue;
         col.enabled = false;
+        wobbleMat.SetColor("_SideColor", new Color32(125, 125, 125, 255));
+        wobbleMat.SetColor("_TopColor", new Color32(125, 125, 125, 255));
         DOTween.To(() => currentValue, x => currentValue = x, endValue, duration)
             .OnUpdate(() =>
             {
@@ -187,6 +189,7 @@ public class ClothesBase : MonoBehaviour
             ActionManager.GainRope?.Invoke();
             sprite.gameObject.SetActive(true);
             ActionManager.UpdateMoney?.Invoke(money);
+            DeInit();
         });
     }
 
@@ -203,6 +206,7 @@ public class ClothesBase : MonoBehaviour
             col.enabled = true;
             targetTransform.gameObject.SetActive(false);
             ActionManager.UpdateMoney?.Invoke(money);
+            DeInit();
         });
     }
 

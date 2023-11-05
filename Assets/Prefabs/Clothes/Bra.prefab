@@ -84,7 +84,7 @@ MonoBehaviour:
   money: 0
   clothType: 3
   startValue: 0
-  endValue: 0.216
+  endValue: 0.24
   placementDuration: 1
   sprite: {fileID: 6334442592275486677}
   model: {fileID: 8505139035378754824}
