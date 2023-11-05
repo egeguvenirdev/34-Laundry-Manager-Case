@@ -15,6 +15,10 @@ public static class ActionManager
 
     public static Action GainRope { get; set; }
 
+    public static Action SewScreen { get; set; }
+
+    public static Action DyeScreen { get; set; }
+
 
     //Input Actions
     public static Action<Thread> ThreadSelection { get; set; }

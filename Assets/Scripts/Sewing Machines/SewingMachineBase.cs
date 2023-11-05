@@ -165,8 +165,7 @@ public abstract class SewingMachineBase : MonoBehaviour
 
     private void PlayClothAnim()
     {
-        Material spriteMat = machineSymbolBorder.material;
-        TurnToGreen(spriteMat);
+        TurnToGreen();
     }
 
     private void PlayProduceParticle()
@@ -174,20 +173,24 @@ public abstract class SewingMachineBase : MonoBehaviour
         producedParticle.Play();
     }
 
-    private void TurnToGreen(Material refMat)
+    private void TurnToGreen()
     {
-        refMat.DOColor(white, 0.5f).OnComplete( () => { TurnToWhite(refMat); } );
+        Material spriteMat = machineSymbolBorder.material;
+        spriteMat.DOColor(white, 0.5f).OnComplete( () => { TurnToWhite(); } );
     }
 
-    private void TurnToWhite(Material refMat)
+    private void TurnToWhite()
     {
-        refMat.DOColor(green, 0.5f).OnComplete(() => { TurnToGreen(refMat); });
+        Material spriteMat = machineSymbolBorder.material;
+        spriteMat.DOColor(green, 0.5f).OnComplete(() => { TurnToGreen(); });
     }
 
     public void GetClothes()
     {
         CanProduce = true;
         DOTween.KillAll();
+        Material spriteMat = machineSymbolBorder.material;
+        spriteMat.DOColor(white, 0);
     }
     #endregion
 
