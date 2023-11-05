@@ -14,6 +14,7 @@ public class UIManager : MonoSingleton<UIManager>
     [Header("Level & Money")]
     [SerializeField] private TMP_Text currentLV;
     [SerializeField] private TMP_Text totalMoneyText;
+    [SerializeField] private Transform moneyUITransform;
 
     [Header("Health & Xp Bars")]
     [SerializeField] private Image progressBarImage;
@@ -22,6 +23,11 @@ public class UIManager : MonoSingleton<UIManager>
 
     private float smoothMoneyNumbers = 0;
     private Tweener smoothTween;
+
+    public Transform GetMoneyUiTransform
+    {
+        get => moneyUITransform;
+    }
 
     public void Init()
     {

@@ -8,6 +8,7 @@ public class ClothesBase : MonoBehaviour
     [Header("Clothes Settings")]
     [SerializeField] private MeshRenderer wobbleRenderer;
     [SerializeField] private float clothMoneyValue;
+    [SerializeField] private float money;
     private Material wobbleMat;
 
     [Header("Produce Settings")]
@@ -26,6 +27,7 @@ public class ClothesBase : MonoBehaviour
 
     private StageSwapperButton swapButton;
     private VibrationManager vibration;
+    private ClothesUIManager clothesUIManager;
     private Camera cam;
     private float currentValue;
 
@@ -45,7 +47,7 @@ public class ClothesBase : MonoBehaviour
     public void Init(Vector3 instantiatePos, float produceDuration)
     {
         ActionManager.ClearClothSelection += OnClearRopeSelection;
-
+        clothesUIManager = FindObjectOfType<ClothesUIManager>();
         cam = Camera.main;
         vibration = VibrationManager.Instance;
 
@@ -72,6 +74,7 @@ public class ClothesBase : MonoBehaviour
     private void StartProducing(float duration)
     {
         currentValue = startValue;
+        col.enabled = false;
         DOTween.To(() => currentValue, x => currentValue = x, endValue, duration)
             .OnUpdate(() =>
             {
@@ -83,7 +86,7 @@ public class ClothesBase : MonoBehaviour
     {
         if (painted)
         {
-            ActionManager.SellTheClothes?.Invoke(this);
+            SellTheClothes();
             painted = false;
             return;
         }
@@ -150,20 +153,52 @@ public class ClothesBase : MonoBehaviour
         });
 
         yield return new WaitForSeconds(duration);
-
+        transform.parent = null;
+        transform.DOMoveY(transform.position.y + 0.2f, 0.5f);
+        painted = true;
+        col.enabled = true;
         //DeInit();
     }
 
-    public void SellTheClothes(Vector3 target)
+    public void SellTheClothes()
     {
+        Transform targetUI = clothesUIManager.CheckList(this);
+
+        if(targetUI == null)
+        {
+            InstaSell(UIManager.Instance.GetMoneyUiTransform);
+            return;
+        }
+        UiToSell(targetUI);
+    }
+
+    private void InstaSell(Transform targetTransform)
+    {
+        Vector3 target = targetTransform.position;
         target.z = (transform.position - cam.transform.position).z;
         Vector3 result = cam.ScreenToWorldPoint(target);
 
         transform.DOMove(result, 0.75f).OnComplete(() =>
         {
-            ActionManager.GainClothes?.Invoke(this);
+            ActionManager.GainRope?.Invoke();
+            sprite.gameObject.SetActive(true);
+            ActionManager.UpdateMoney?.Invoke(money);
+        });
+    }
+
+    private void UiToSell(Transform targetTransform)
+    {
+        Vector3 target = targetTransform.position;
+        target.z = (transform.position - cam.transform.position).z;
+        Vector3 result = cam.ScreenToWorldPoint(target);
+
+        transform.DOMove(result, 0.75f).OnComplete(() =>
+        {
+            ActionManager.GainRope?.Invoke();
             sprite.gameObject.SetActive(true);
             col.enabled = true;
+            targetTransform.gameObject.SetActive(false);
+            ActionManager.UpdateMoney?.Invoke(money);
         });
     }
 

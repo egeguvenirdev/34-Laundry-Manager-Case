@@ -7,7 +7,7 @@ public class ClothesUIManager : MonoBehaviour
 {
     [Header("Clothes UI Props")]
     [SerializeField] private GameObject uiBase;
-    private List<ClothesUI> uis = new List<ClothesUI>();
+    [SerializeField] private List<ClothesUI> uis = new List<ClothesUI>();
 
     [Header("Colors")]
     [SerializeField] private Color blue1;
@@ -39,7 +39,10 @@ public class ClothesUIManager : MonoBehaviour
         {
             if (refCloth.ClothesColorType == uis[i].GetColorType && refCloth.GetClothesType == uis[i].GetClothType)
             {
-                return uis[i].transform;
+                ClothesUI selectedUi = uis[i];
+                uis.Remove(selectedUi);
+                if (uis.Count == 0) GameManager.Instance.FinishTheGame(true);
+                return selectedUi.transform;
             }
         }
         return null;

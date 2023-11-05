@@ -81,6 +81,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wobbleRenderer: {fileID: 1911043880302026706}
   clothMoneyValue: 100
+  money: 0
   clothType: 1
   startValue: 0.1
   endValue: 0.19
@@ -99,7 +100,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.25, z: 0.25}
+  m_Size: {x: 0.4, y: 1, z: 0.51}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &74969446138036512
 PrefabInstance:

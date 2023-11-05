@@ -4876,6 +4876,7 @@ MonoBehaviour:
   clothesManager: {fileID: 0}
   currentLV: {fileID: 3066104948377910513}
   totalMoneyText: {fileID: 20773864705674967}
+  moneyUITransform: {fileID: 20773865346206661}
   progressBarImage: {fileID: 7785882747752488652}
 --- !u!223 &8286306661346076681
 Canvas:

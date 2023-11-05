@@ -154,6 +154,7 @@ public class DyeMachineBase : MonoBehaviour
     public IEnumerator ProduceClothes(float delay)
     {
         CanProduce = false;
+        col.enabled = false;
         yield return new WaitForSeconds(delay);
         producedParticle.Play();
         StartDye();
@@ -180,6 +181,7 @@ public class DyeMachineBase : MonoBehaviour
     public void GetClothes()
     {
         CanProduce = true;
+        col.enabled = true;
         DOTween.KillAll();
         
     }

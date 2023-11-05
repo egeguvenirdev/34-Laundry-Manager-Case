@@ -194,6 +194,7 @@ public abstract class SewingMachineBase : MonoBehaviour
         spriteMat.DOColor(white, 0);
         produceCloth.MoveToUITarget();
         produceCloth = null;
+        producedClothes = false;
     }
     #endregion
 
