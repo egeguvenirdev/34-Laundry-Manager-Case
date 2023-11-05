@@ -10,6 +10,14 @@ public enum ClothType
     Bra
 }
 
+public enum ColorType
+{
+    Blue1,
+    Blue2,
+    Green1,
+    Green2
+}
+
 public static class Utilities
 {
 

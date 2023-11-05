@@ -20,6 +20,7 @@ public class StageSwapperButton : ButtonBase
 
     public override void OnButtonClick()
     {
+        ActionManager.ClearThreadSelection.Invoke();
         if (mainStage)
         {
             mainStage = false;

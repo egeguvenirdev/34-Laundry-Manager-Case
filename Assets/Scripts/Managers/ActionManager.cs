@@ -27,6 +27,12 @@ public static class ActionManager
 
     public static Action ClearThreadSelection { get; set; }
 
+    public static Action<Thread> ClothSelection { get; set; }
+
+    public static Action<DyeMachineBase> GetSelectedCloth { get; set; }
+
+    public static Action ClearClothSelection { get; set; }
+
 
     //Money Actions
     public static Action<float> UpdateMoney { get; set; }

@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 
-public abstract class SewingMachineBase : MonoBehaviour
+public class DyeMachineBase : MonoBehaviour
 {
     [Header("Components")]
     private Collider col;
-    [SerializeField] public MachineRope machineRope;
 
     [Header("Properties")]
-    [SerializeField] private ClothType clothType;
-    [SerializeField] private Transform threadTargetPos;
-    [SerializeField] private GameObject machineSymbol;
+    [SerializeField] private ColorType colorType;
+    [SerializeField] private Transform clothTargetPos;
 
     [Header("Lock Interface")]
     [SerializeField] private GameObject lockUI;
@@ -25,16 +24,15 @@ public abstract class SewingMachineBase : MonoBehaviour
     [SerializeField] private ParticleSystem unlockParticle;
 
     [Header("Produce Settings")]
-    [SerializeField] private SpriteRenderer machineSymbolBorder;
+    [SerializeField] private Image cooldownImage;
     [SerializeField] protected Transform producePos;
     [SerializeField] private ParticleSystem producedParticle;
-    private Color white = Color.white;
-    private Color green = Color.green;
 
     //Machine Props
     protected float produceDuration;
     protected float unlockLevel;
     protected float moneyValue;
+    protected float cooldown;
 
     private bool buyable = false;
     private bool canProduce = false;
@@ -49,14 +47,14 @@ public abstract class SewingMachineBase : MonoBehaviour
         private set => canProduce = value;
     }
 
-    public ClothType GetClothType
+    public ColorType GetColorType
     {
-        get => clothType;
+        get => colorType;
     }
 
     public Vector3 GetThreadTransform
     {
-        get => threadTargetPos.position;
+        get => clothTargetPos.position;
     }
 
     public void Init(int currentLevel)
@@ -106,8 +104,8 @@ public abstract class SewingMachineBase : MonoBehaviour
 
         if (canProduce)
         {
-            ActionManager.GetSelectedThread?.Invoke(this);
-            ActionManager.ClearThreadSelection?.Invoke();
+            ActionManager.GetSelectedCloth?.Invoke(this);
+            ActionManager.ClearClothSelection?.Invoke();
             return;
         }
     }
@@ -117,7 +115,7 @@ public abstract class SewingMachineBase : MonoBehaviour
     {
         get
         {
-            if (PlayerPrefs.GetInt(ConstantVariables.BuyCheck.UnlockCheck + clothType.ToString(), 0) == 0)
+            if (PlayerPrefs.GetInt(ConstantVariables.BuyCheck.UnlockCheck + colorType.ToString(), 0) == 0)
             {
                 return false;
             }
@@ -126,17 +124,16 @@ public abstract class SewingMachineBase : MonoBehaviour
 
         set
         {
-            if (value) PlayerPrefs.GetInt(ConstantVariables.BuyCheck.UnlockCheck + clothType.ToString(), 1);
+            if (value) PlayerPrefs.GetInt(ConstantVariables.BuyCheck.UnlockCheck + colorType.ToString(), 1);
         }
     }
 
     protected void UnlockTheMachine()
     {
         CanProduce = true;
-        unlockParticle.Play();
+        //unlockParticle.Play();
         if (moneyUI != null) moneyUI.SetActive(false);
         UnlockCheck = true;
-        machineSymbol.SetActive(true);
     }
 
     #endregion
@@ -146,18 +143,15 @@ public abstract class SewingMachineBase : MonoBehaviour
     {
         CanProduce = false;
         yield return new WaitForSeconds(delay);
-        StartProduce();
-        Debug.Log("produce started");
-        machineRope.Init(produceDuration);
+        StartDye();
         yield return new WaitForSeconds(produceDuration);
         producedClothes = true;
         PlayClothAnim();
         PlayProduceParticle();
     }
 
-    protected void StartProduce()
+    protected void StartDye()
     {
-        Debug.Log("Get pooled item");
         ClothesBase produceCloth = pooler.GetPooledClothes(GetClothType);
         produceCloth.gameObject.SetActive(true);
         produceCloth.Init(producePos.position, produceDuration);
@@ -165,7 +159,8 @@ public abstract class SewingMachineBase : MonoBehaviour
 
     private void PlayClothAnim()
     {
-        TurnToGreen();
+        DOTween.To(() => cooldown, x => cooldown = x, produceDuration, 0.5f).SetSpeedBased(false)
+            .OnUpdate(() => { cooldownImage.fillAmount = cooldown / produceDuration; });
     }
 
     private void PlayProduceParticle()
@@ -173,24 +168,11 @@ public abstract class SewingMachineBase : MonoBehaviour
         producedParticle.Play();
     }
 
-    private void TurnToGreen()
-    {
-        Material spriteMat = machineSymbolBorder.material;
-        spriteMat.DOColor(white, 0.5f).OnComplete( () => { TurnToWhite(); } );
-    }
-
-    private void TurnToWhite()
-    {
-        Material spriteMat = machineSymbolBorder.material;
-        spriteMat.DOColor(green, 0.5f).OnComplete(() => { TurnToGreen(); });
-    }
-
     public void GetClothes()
     {
         CanProduce = true;
         DOTween.KillAll();
-        Material spriteMat = machineSymbolBorder.material;
-        spriteMat.DOColor(white, 0);
+        
     }
     #endregion
 
@@ -203,7 +185,7 @@ public abstract class SewingMachineBase : MonoBehaviour
 
     protected void SetProperties()
     {
-        var machineProps = MachineUtility.GetMachineConfigByType(GetClothType);
+        var machineProps = DyeUthility.GetDyeConfigByType(GetColorType);
         produceDuration = machineProps.ProduceDuration;
         unlockLevel = machineProps.UnlockLevel;
         moneyValue = machineProps.MoneyValue;
