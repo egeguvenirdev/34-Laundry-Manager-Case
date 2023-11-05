@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headerSettings:
-    headerText: level 1
+    headerText: level 6
     headerColor: {r: 0, g: 0.43753874, b: 0.8490566, a: 1}
     textAlignmentOptions: 0
     fontStyleOptions: 0
@@ -435,7 +435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1335226282815160109, guid: afa35363b96286544b59bad37707fb5d, type: 3}
       propertyPath: currentThreadCount
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1335226282815160111, guid: afa35363b96286544b59bad37707fb5d, type: 3}
       propertyPath: m_Name

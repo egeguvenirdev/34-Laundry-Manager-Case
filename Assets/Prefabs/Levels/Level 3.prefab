@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headerSettings:
-    headerText: level 1
+    headerText: level 3
     headerColor: {r: 0, g: 0.43753874, b: 0.8490566, a: 1}
     textAlignmentOptions: 0
     fontStyleOptions: 0
