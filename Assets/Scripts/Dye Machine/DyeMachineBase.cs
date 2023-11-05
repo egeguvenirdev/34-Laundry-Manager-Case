@@ -144,7 +144,7 @@ public class DyeMachineBase : MonoBehaviour
     {
         CanProduce = true;
         buyable = false;
-        //unlockParticle.Play();
+        unlockParticle.Play();
         if (moneyUI != null) moneyUI.SetActive(false);
         UnlockCheck = true;
     }
