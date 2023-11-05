@@ -38,6 +38,8 @@ public static class ActionManager
 
     public static Action<ClothesBase> SellTheClothes { get; set; }
 
+    public static Action<ColorType> SelledClothesType { get; set; }
+
 
     //Money Actions
     public static Action<float> UpdateMoney { get; set; }

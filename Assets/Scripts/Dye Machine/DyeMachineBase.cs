@@ -70,6 +70,7 @@ public class DyeMachineBase : MonoBehaviour
 
     public void Init(int currentLevel)
     {
+        ActionManager.SelledClothesType += GetClothes;
         col = GetComponent<Collider>();
         pooler = ObjectPooler.Instance;
         SetProperties();
@@ -90,12 +91,16 @@ public class DyeMachineBase : MonoBehaviour
                     UnlockTheMachine();
                 }
             }
+            else
+            {
+                UnlockTheMachine();
+            }
         }
     }
 
     public void DeInit()
     {
-
+        ActionManager.SelledClothesType -= GetClothes;
     }
 
     protected void OnMouseDown()
@@ -107,11 +112,6 @@ public class DyeMachineBase : MonoBehaviour
                 UnlockTheMachine();
             }
             return;
-        }
-
-        if (producedClothes)
-        {
-            GetClothes();
         }
 
         if (canProduce)
@@ -136,13 +136,14 @@ public class DyeMachineBase : MonoBehaviour
 
         set
         {
-            if (value) PlayerPrefs.GetInt(ConstantVariables.BuyCheck.UnlockCheck + colorType.ToString(), 1);
+            if (value) PlayerPrefs.SetInt(ConstantVariables.BuyCheck.UnlockCheck + colorType.ToString(), 1);
         }
     }
 
     protected void UnlockTheMachine()
     {
         CanProduce = true;
+        buyable = false;
         //unlockParticle.Play();
         if (moneyUI != null) moneyUI.SetActive(false);
         UnlockCheck = true;
@@ -157,19 +158,12 @@ public class DyeMachineBase : MonoBehaviour
         col.enabled = false;
         yield return new WaitForSeconds(delay);
         producedParticle.Play();
-        StartDye();
         rotator.Init(produceDuration);
         yield return new WaitForSeconds(produceDuration);
         producedClothes = true;
+        //col.enabled = true;
         PlayClothAnim();
         producedParticle.Stop();
-    }
-
-    protected void StartDye()
-    {
-        /*ClothesBase produceCloth = pooler.GetPooledClothes(GetClothType);
-        produceCloth.gameObject.SetActive(true);
-        produceCloth.Init(producePos.position, produceDuration);*/
     }
 
     private void PlayClothAnim()
@@ -178,12 +172,15 @@ public class DyeMachineBase : MonoBehaviour
             .OnUpdate(() => { cooldownImage.fillAmount = cooldown / produceDuration; });
     }
 
-    public void GetClothes()
+    public void GetClothes(ColorType refType)
     {
-        CanProduce = true;
-        col.enabled = true;
-        DOTween.KillAll();
-        
+        if(colorType == refType)
+        {
+            CanProduce = true;
+            col.enabled = true;
+            producedClothes = false;
+            DOTween.KillAll();
+        }      
     }
     #endregion
 

@@ -81,6 +81,10 @@ public abstract class SewingMachineBase : MonoBehaviour
                     UnlockTheMachine();
                 }
             }
+            else
+            {
+                UnlockTheMachine();
+            }
         }
     }
 
@@ -127,13 +131,14 @@ public abstract class SewingMachineBase : MonoBehaviour
 
         set
         {
-            if (value) PlayerPrefs.GetInt(ConstantVariables.BuyCheck.UnlockCheck + clothType.ToString(), 1);
+            if (value) PlayerPrefs.SetInt(ConstantVariables.BuyCheck.UnlockCheck + clothType.ToString(), 1);
         }
     }
 
     protected void UnlockTheMachine()
     {
         CanProduce = true;
+        buyable = false;
         if (moneyUI != null) unlockParticle.Play();
         if (moneyUI != null) moneyUI.SetActive(false);
         UnlockCheck = true;

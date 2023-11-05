@@ -15,7 +15,6 @@ public class GameManager : MonoSingleton<GameManager>
     private CamManager camManager;
     private MoneyManager moneyManager;
     private UIManager uIManager;
-    private BandRotator bandRotator;
     private MachineManager machineManager;
     private DyeManager dyeMachineManager;
     private ThreadManager threadManager;
@@ -42,8 +41,6 @@ public class GameManager : MonoSingleton<GameManager>
 
         camManager = FindObjectOfType<CamManager>();
 
-        bandRotator = FindObjectOfType<BandRotator>();
-
         machineManager = FindObjectOfType<MachineManager>();
         machineManager.Init();
 
@@ -64,7 +61,6 @@ public class GameManager : MonoSingleton<GameManager>
         updateManager.DeInit();
         playerManager.DeInit();
         camManager.DeInit();
-        bandRotator.DeInit();
         machineManager.DeInit();
         dyeMachineManager.DeInit();
         threadManager.DeInit();
@@ -94,7 +90,6 @@ public class GameManager : MonoSingleton<GameManager>
     public void FinishTheGame(bool check)
     {
         playerManager.DeInit();
-        uIManager.DeInit();
 
         if (check)
         {

@@ -117,9 +117,10 @@ public class ClothesBase : MonoBehaviour
         vibration.SoftVibration();
     }
 
-    public float StartDyeProcess(Transform target, Color targetColor, float duration)
+    public float StartDyeProcess(Transform target, Color targetColor, float duration, ColorType refColorType)
     {
         StartCoroutine(DyeCo(target, targetColor, duration));
+        colorType = refColorType;
         return placementDuration;
     }
 
@@ -163,7 +164,7 @@ public class ClothesBase : MonoBehaviour
     public void SellTheClothes()
     {
         Transform targetUI = clothesUIManager.CheckList(this);
-
+        ActionManager.SelledClothesType?.Invoke(colorType);
         if(targetUI == null)
         {
             InstaSell(UIManager.Instance.GetMoneyUiTransform);

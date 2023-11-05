@@ -3500,6 +3500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiBase: {fileID: 7643121389066820208, guid: 715c66e6e26887a49b0ce67fdad9fa39, type: 3}
+  uis: []
   blue1: {r: 0.08235294, g: 0.6901961, b: 0.98823535, a: 1}
   blue2: {r: 0.227451, g: 0.7843138, b: 0.78823537, a: 1}
   green1: {r: 0.53333336, g: 0.73333335, b: 0.23529413, a: 1}
@@ -4873,7 +4874,7 @@ MonoBehaviour:
   - {fileID: 1933283586}
   - {fileID: 362203579}
   - {fileID: 8446539349022217530}
-  clothesManager: {fileID: 0}
+  clothesManager: {fileID: 5825955065608708006}
   currentLV: {fileID: 3066104948377910513}
   totalMoneyText: {fileID: 20773864705674967}
   moneyUITransform: {fileID: 20773865346206661}
