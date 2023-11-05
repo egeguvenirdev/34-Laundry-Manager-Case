@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4452468312461463280, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
       propertyPath: m_Name
-      value: Blue 2  Machine
+      value: Blue 2  Machine Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7624994807888796763, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -91,7 +91,7 @@ MonoBehaviour:
   moneyText: {fileID: 3464479139214609412}
   unlockParticle: {fileID: 72125870851847831}
   cooldownImage: {fileID: 0}
-  producedParticle: {fileID: 0}
+  producedParticle: {fileID: 5436560128933306594}
   matColor:
     serializedVersion: 2
     rgba: 4292921657
@@ -109,6 +109,11 @@ MonoBehaviour:
 --- !u!1 &4581957417826683913 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 135872804705120261, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
+  m_PrefabInstance: {fileID: 4500457662744574988}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5731016234001852714 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8213578912249042214, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
   m_PrefabInstance: {fileID: 4500457662744574988}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &6357914501868862073 stripped
@@ -131,4 +136,66 @@ GameObject:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4808167078663946697, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
   m_PrefabInstance: {fileID: 4500457662744574988}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5727209726401525513
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5731016234001852714}
+    m_Modifications:
+    - target: {fileID: 4411357065931240245, guid: dc217df22ed3caa40ac08045d0d6b760, type: 3}
+      propertyPath: m_Name
+      value: Dye Part Blue 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120180321441124740, guid: dc217df22ed3caa40ac08045d0d6b760, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120180321441124740, guid: dc217df22ed3caa40ac08045d0d6b760, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120180321441124740, guid: dc217df22ed3caa40ac08045d0d6b760, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.331
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120180321441124740, guid: dc217df22ed3caa40ac08045d0d6b760, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.058
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120180321441124740, guid: dc217df22ed3caa40ac08045d0d6b760, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120180321441124740, guid: dc217df22ed3caa40ac08045d0d6b760, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120180321441124740, guid: dc217df22ed3caa40ac08045d0d6b760, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120180321441124740, guid: dc217df22ed3caa40ac08045d0d6b760, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120180321441124740, guid: dc217df22ed3caa40ac08045d0d6b760, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120180321441124740, guid: dc217df22ed3caa40ac08045d0d6b760, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120180321441124740, guid: dc217df22ed3caa40ac08045d0d6b760, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dc217df22ed3caa40ac08045d0d6b760, type: 3}
+--- !u!198 &5436560128933306594 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 290948664800319467, guid: dc217df22ed3caa40ac08045d0d6b760, type: 3}
+  m_PrefabInstance: {fileID: 5727209726401525513}
   m_PrefabAsset: {fileID: 0}

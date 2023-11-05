@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6598625362374645696
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3047772578682938713}
+    m_Modifications:
+    - target: {fileID: 8407978726153365160, guid: 215cc201cf867ca47aafa808bf28708a, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8407978726153365160, guid: 215cc201cf867ca47aafa808bf28708a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8407978726153365160, guid: 215cc201cf867ca47aafa808bf28708a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.331
+      objectReference: {fileID: 0}
+    - target: {fileID: 8407978726153365160, guid: 215cc201cf867ca47aafa808bf28708a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.058
+      objectReference: {fileID: 0}
+    - target: {fileID: 8407978726153365160, guid: 215cc201cf867ca47aafa808bf28708a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8407978726153365160, guid: 215cc201cf867ca47aafa808bf28708a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8407978726153365160, guid: 215cc201cf867ca47aafa808bf28708a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8407978726153365160, guid: 215cc201cf867ca47aafa808bf28708a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8407978726153365160, guid: 215cc201cf867ca47aafa808bf28708a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8407978726153365160, guid: 215cc201cf867ca47aafa808bf28708a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8407978726153365160, guid: 215cc201cf867ca47aafa808bf28708a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8407978726153684168, guid: 215cc201cf867ca47aafa808bf28708a, type: 3}
+      propertyPath: m_Name
+      value: Dye Part Blue 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 215cc201cf867ca47aafa808bf28708a, type: 3}
+--- !u!198 &3403633716482345800 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8407978726133881992, guid: 215cc201cf867ca47aafa808bf28708a, type: 3}
+  m_PrefabInstance: {fileID: 6598625362374645696}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6608930765045297279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9,7 +71,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4452468312461463280, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
       propertyPath: m_Name
-      value: Blue 1  Machine
+      value: Blue 1  Machine Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7624994807888796763, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -64,6 +126,11 @@ PrefabInstance:
 --- !u!4 &1805285909802971574 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4808167078663946697, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
+  m_PrefabInstance: {fileID: 6608930765045297279}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3047772578682938713 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8213578912249042214, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}
   m_PrefabInstance: {fileID: 6608930765045297279}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &4465508595312457226 stripped
@@ -123,7 +190,7 @@ MonoBehaviour:
   moneyText: {fileID: 6185474797122388087}
   unlockParticle: {fileID: 7260730575693200100}
   cooldownImage: {fileID: 0}
-  producedParticle: {fileID: 0}
+  producedParticle: {fileID: 3403633716482345800}
   matColor:
     serializedVersion: 2
     rgba: 4294880790
