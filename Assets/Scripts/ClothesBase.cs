@@ -60,8 +60,6 @@ public class ClothesBase : MonoBehaviour
         vibration.SoftVibration();
         swapButton = FindObjectOfType<StageSwapperButton>();
         colorType = ColorType.nullColor;
-        wobbleMat = wobbleRenderer.material;
-        wobbleMat.SetFloat("_Fill", 0);
 
         transform.position = instantiatePos;
         transform.parent = null;
@@ -84,6 +82,7 @@ public class ClothesBase : MonoBehaviour
     {
         currentValue = startValue;
         col.enabled = false;
+        wobbleMat = wobbleRenderer.material;
         wobbleMat.SetColor("_SideColor", new Color32(125, 125, 125, 255));
         wobbleMat.SetColor("_TopColor", new Color32(125, 125, 125, 255));
         transform.rotation = Quaternion.Euler(0, 0, 0);
