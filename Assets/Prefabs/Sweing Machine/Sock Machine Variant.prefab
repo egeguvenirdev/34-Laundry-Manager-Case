@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4452468312461463280, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
       propertyPath: m_Name
-      value: Sock Machine
+      value: Sock Machine Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8213578912249042214, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}
       propertyPath: m_RootOrder
@@ -154,3 +154,4 @@ MonoBehaviour:
   machineSymbolBorder: {fileID: 6755837535945483656}
   producePos: {fileID: 676722238441454326}
   producedParticle: {fileID: 5296186706415194771}
+  finishAudio: {fileID: 8300000, guid: fba4602d1f975405a8690324a638abbf, type: 3}

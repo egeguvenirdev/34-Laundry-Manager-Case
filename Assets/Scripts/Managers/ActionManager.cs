@@ -7,7 +7,7 @@ using System.Reflection;
 public static class ActionManager
 {
     //Game Actions
-    public static Action GameStart { get; set; }
+    public static Action<AudioClip> PlayAudio { get; set; }
 
     public static Action<bool> GameEnd { get; set; }
 

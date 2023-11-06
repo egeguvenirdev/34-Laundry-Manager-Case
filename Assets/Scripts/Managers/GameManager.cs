@@ -19,6 +19,7 @@ public class GameManager : MonoSingleton<GameManager>
     private DyeManager dyeMachineManager;
     private ThreadManager threadManager;
     private ClothManager clothManager;
+    private AudioManager audioManager;
 
     void Start()
     {
@@ -52,6 +53,9 @@ public class GameManager : MonoSingleton<GameManager>
 
         clothManager = FindObjectOfType<ClothManager>();
         clothManager.Init();
+
+        audioManager = FindObjectOfType<AudioManager>();
+        audioManager.Init();
     }
 
     private void DeInits()
@@ -64,6 +68,7 @@ public class GameManager : MonoSingleton<GameManager>
         dyeMachineManager.DeInit();
         threadManager.DeInit();
         clothManager.DeInit();
+        audioManager.DeInit();
     }
 
     public void OnStartTheGame()

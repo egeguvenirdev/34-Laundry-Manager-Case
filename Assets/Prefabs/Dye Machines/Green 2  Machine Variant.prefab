@@ -94,6 +94,7 @@ MonoBehaviour:
   producedParticle: {fileID: 6581091539788423323}
   producedParticleSmoke: {fileID: 3064325098857756864}
   matColor: {r: 0.17254902, g: 0.6745098, b: 0.26666668, a: 1}
+  finishAudio: {fileID: 8300000, guid: a336953e51bb147da91c2d92d23ab41d, type: 3}
 --- !u!198 &501747663688152398 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 4572535152599517851, guid: 4e8fd743ed2a9b948bb7e90003119f79, type: 3}

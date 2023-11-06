@@ -11,6 +11,10 @@ public class Thread : MonoBehaviour
     [SerializeField] private Collider col;
     [SerializeField] private float placementDuration = 1f;
 
+    [Header("Audýo Settings")]
+    [SerializeField] private AudioClip slideAudio;
+    [SerializeField] private AudioClip selectAudio;
+
     private bool selected;
 
     private VibrationManager vibration;
@@ -47,6 +51,7 @@ public class Thread : MonoBehaviour
     {
         selected = true;
         sprite.color = Color.green;
+        ActionManager.PlayAudio?.Invoke(selectAudio);
         vibration.SoftVibration();
         PlayDoPunch(model);
     }
@@ -69,6 +74,7 @@ public class Thread : MonoBehaviour
         sprite.gameObject.SetActive(false);
         col.enabled = false;
         transform.DOMove(target, placementDuration);
+        ActionManager.PlayAudio?.Invoke(slideAudio);
         yield return new WaitForSeconds(placementDuration);
         DeInit();
     }

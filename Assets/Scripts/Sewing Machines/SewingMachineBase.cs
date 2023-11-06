@@ -31,6 +31,9 @@ public abstract class SewingMachineBase : MonoBehaviour
     private Color white = Color.white;
     private Color green = Color.green;
 
+    [Header("Audýo Settings")]
+    [SerializeField] private AudioClip finishAudio;
+
     //Machine Props
     protected float produceDuration;
     protected float unlockLevel;
@@ -155,6 +158,7 @@ public abstract class SewingMachineBase : MonoBehaviour
         machineRope.Init(produceDuration);
         yield return new WaitForSeconds(produceDuration);
         producedClothes = true;
+        ActionManager.PlayAudio?.Invoke(finishAudio);
         PlayClothAnim();
         PlayProduceParticle();
     }

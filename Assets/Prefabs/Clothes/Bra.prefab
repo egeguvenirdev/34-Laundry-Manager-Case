@@ -89,6 +89,8 @@ MonoBehaviour:
   sprite: {fileID: 6334442592275486677}
   model: {fileID: 8505139035378754824}
   col: {fileID: 4307133999344241087}
+  slideAudio: {fileID: 8300000, guid: a10f4996997274c4e8d11c53f64e8aae, type: 3}
+  selectAudio: {fileID: 8300000, guid: e7d2773b321a045708943acdfe7d7e1d, type: 3}
 --- !u!65 &4307133999344241087
 BoxCollider:
   m_ObjectHideFlags: 0

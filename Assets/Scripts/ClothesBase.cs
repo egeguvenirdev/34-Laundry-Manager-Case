@@ -22,6 +22,10 @@ public class ClothesBase : MonoBehaviour
     [SerializeField] private Transform model;
     [SerializeField] private Collider col;
 
+    [Header("Audýo Settings")]
+    [SerializeField] private AudioClip slideAudio;
+    [SerializeField] private AudioClip selectAudio;
+
     private bool selected;
     private bool painted;
 
@@ -114,6 +118,7 @@ public class ClothesBase : MonoBehaviour
         selected = true;
         sprite.color = Color.green;
         vibration.SoftVibration();
+        ActionManager.PlayAudio?.Invoke(selectAudio);
         PlayDoPunch(model);
     }
 
@@ -136,7 +141,7 @@ public class ClothesBase : MonoBehaviour
         Vector3 target = swapButton.transform.position;
         target.z = (transform.position - cam.transform.position).z;
         Vector3 result = cam.ScreenToWorldPoint(target);
-
+        ActionManager.PlayAudio?.Invoke(slideAudio);
         transform.DOMove(result, 0.75f).OnComplete(() =>
         {
             ActionManager.GainClothes?.Invoke(this);
@@ -174,6 +179,7 @@ public class ClothesBase : MonoBehaviour
     {
         Transform targetUI = clothesUIManager.CheckList(this);
         ActionManager.SelledClothesType?.Invoke(colorType);
+        ActionManager.PlayAudio?.Invoke(slideAudio);
         vibration.SoftVibration();
         if (targetUI == null)
         {

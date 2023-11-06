@@ -219,3 +219,4 @@ MonoBehaviour:
   producedParticle: {fileID: 7035365207804559041}
   producedParticleSmoke: {fileID: 6090213354338822199}
   matColor: {r: 0.44705886, g: 0.6666667, b: 0.25490198, a: 1}
+  finishAudio: {fileID: 8300000, guid: a336953e51bb147da91c2d92d23ab41d, type: 3}

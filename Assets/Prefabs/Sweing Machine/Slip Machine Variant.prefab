@@ -116,6 +116,7 @@ MonoBehaviour:
   machineSymbolBorder: {fileID: 6923811081592049955}
   producePos: {fileID: 3797638692329885277}
   producedParticle: {fileID: 8405980457739806264}
+  finishAudio: {fileID: 8300000, guid: fba4602d1f975405a8690324a638abbf, type: 3}
 --- !u!114 &5806443951538344696 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2782455170117442924, guid: 17c135457b6afad4ea6cc8551a66638b, type: 3}

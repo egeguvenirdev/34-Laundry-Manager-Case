@@ -30,6 +30,9 @@ public class DyeMachineBase : MonoBehaviour
     [SerializeField] private ParticleSystem producedParticleSmoke;
     [SerializeField] private Color matColor;
 
+    [Header("Audýo Settings")]
+    [SerializeField] private AudioClip finishAudio;
+
     //Machine Props
     protected float produceDuration;
     protected float unlockLevel;
@@ -164,6 +167,7 @@ public class DyeMachineBase : MonoBehaviour
         producedClothes = true;
         //col.enabled = true;
         PlayClothAnim();
+        ActionManager.PlayAudio?.Invoke(finishAudio);
         producedParticle.Stop();
         producedParticleSmoke.Play();
     }
