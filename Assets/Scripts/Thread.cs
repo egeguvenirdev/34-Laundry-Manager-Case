@@ -11,7 +11,7 @@ public class Thread : MonoBehaviour
     [SerializeField] private Collider col;
     [SerializeField] private float placementDuration = 1f;
 
-    [Header("Audýo Settings")]
+    [Header("Audio Settings")]
     [SerializeField] private AudioClip slideAudio;
     [SerializeField] private AudioClip selectAudio;
 

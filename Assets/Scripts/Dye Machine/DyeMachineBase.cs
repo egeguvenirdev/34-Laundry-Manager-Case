@@ -30,7 +30,7 @@ public class DyeMachineBase : MonoBehaviour
     [SerializeField] private ParticleSystem producedParticleSmoke;
     [SerializeField] private Color matColor;
 
-    [Header("Audýo Settings")]
+    [Header("Audio Settings")]
     [SerializeField] private AudioClip finishAudio;
 
     //Machine Props
@@ -185,7 +185,6 @@ public class DyeMachineBase : MonoBehaviour
             CanProduce = true;
             col.enabled = true;
             producedClothes = false;
-            DOTween.KillAll();
         }      
     }
     #endregion

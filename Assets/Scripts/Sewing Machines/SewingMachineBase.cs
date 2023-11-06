@@ -31,7 +31,7 @@ public abstract class SewingMachineBase : MonoBehaviour
     private Color white = Color.white;
     private Color green = Color.green;
 
-    [Header("Audýo Settings")]
+    [Header("Audio Settings")]
     [SerializeField] private AudioClip finishAudio;
 
     //Machine Props
@@ -45,6 +45,8 @@ public abstract class SewingMachineBase : MonoBehaviour
 
     protected ObjectPooler pooler;
     private ClothesBase produceCloth;
+
+    private Tween tween;
 
     public bool CanProduce
     {
@@ -161,6 +163,8 @@ public abstract class SewingMachineBase : MonoBehaviour
         ActionManager.PlayAudio?.Invoke(finishAudio);
         PlayClothAnim();
         PlayProduceParticle();
+        yield return new WaitForSeconds(delay);
+        machineRope.StopAnims();
     }
 
     protected void StartProduce()
@@ -183,19 +187,19 @@ public abstract class SewingMachineBase : MonoBehaviour
     private void TurnToGreen()
     {
         Material spriteMat = machineSymbolBorder.material;
-        spriteMat.DOColor(white, 0.5f).OnComplete( () => { TurnToWhite(); } );
+        tween = spriteMat.DOColor(white, 0.5f).OnComplete( () => { TurnToWhite(); } );
     }
 
     private void TurnToWhite()
     {
         Material spriteMat = machineSymbolBorder.material;
-        spriteMat.DOColor(green, 0.5f).OnComplete(() => { TurnToGreen(); });
+        tween = spriteMat.DOColor(green, 0.5f).OnComplete(() => { TurnToGreen(); });
     }
 
     public void GetClothes()
     {
         CanProduce = true;
-        DOTween.KillAll();
+        tween.Kill();
         Material spriteMat = machineSymbolBorder.material;
         spriteMat.DOColor(white, 0);
         produceCloth.MoveToUITarget();

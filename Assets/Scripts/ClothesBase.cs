@@ -22,7 +22,7 @@ public class ClothesBase : MonoBehaviour
     [SerializeField] private Transform model;
     [SerializeField] private Collider col;
 
-    [Header("Audýo Settings")]
+    [Header("Audio Settings")]
     [SerializeField] private AudioClip slideAudio;
     [SerializeField] private AudioClip selectAudio;
 
@@ -35,7 +35,7 @@ public class ClothesBase : MonoBehaviour
     private ObjectPooler pooler;
     private Camera cam;
     private float currentValue;
-
+    private Tweener tween;
     private ColorType colorType;
 
     public ClothType GetClothesType
@@ -86,8 +86,8 @@ public class ClothesBase : MonoBehaviour
         wobbleMat.SetColor("_SideColor", new Color32(125, 125, 125, 255));
         wobbleMat.SetColor("_TopColor", new Color32(125, 125, 125, 255));
         transform.rotation = Quaternion.Euler(0, 0, 0);
-        DOTween.To(() => currentValue, x => currentValue = x, startValue, 0);
-        DOTween.To(() => currentValue, x => currentValue = x, endValue, duration).SetSpeedBased(false)
+        tween.Kill();
+        tween = DOTween.To(() => currentValue, x => currentValue = x, endValue, duration).SetSpeedBased(false)
             .OnUpdate(() =>
             {
                 wobbleMat.SetFloat("_Fill", currentValue);
