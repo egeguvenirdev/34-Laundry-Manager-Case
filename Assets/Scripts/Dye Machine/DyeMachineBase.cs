@@ -45,6 +45,7 @@ public class DyeMachineBase : MonoBehaviour
 
     protected ObjectPooler pooler;
     private MoneyManager moneyManager;
+    private VibrationManager vibration;
 
     public bool CanProduce
     {
@@ -77,6 +78,7 @@ public class DyeMachineBase : MonoBehaviour
         ActionManager.SelledClothesType += GetClothes;
         col = GetComponent<Collider>();
         pooler = ObjectPooler.Instance;
+        vibration = VibrationManager.Instance;
         SetProperties();
         producedParticle.Stop();
 
@@ -170,6 +172,7 @@ public class DyeMachineBase : MonoBehaviour
         ActionManager.PlayAudio?.Invoke(finishAudio);
         producedParticle.Stop();
         producedParticleSmoke.Play();
+        vibration.LightVibration();
     }
 
     private void PlayClothAnim()

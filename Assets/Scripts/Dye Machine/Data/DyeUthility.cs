@@ -9,7 +9,7 @@ public class DyeUthility : MonoBehaviour
     {
         {
             ColorType.Blue1,
-            new DyeConfig(1f, 1, 0)
+            new DyeConfig(7.5f, 1, 0)
         },
         {
             ColorType.Blue2,

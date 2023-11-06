@@ -45,6 +45,7 @@ public abstract class SewingMachineBase : MonoBehaviour
 
     protected ObjectPooler pooler;
     private ClothesBase produceCloth;
+    private VibrationManager vibration;
 
     private Tween tween;
 
@@ -68,6 +69,7 @@ public abstract class SewingMachineBase : MonoBehaviour
     {
         col = GetComponent<Collider>();
         pooler = ObjectPooler.Instance;
+        vibration = VibrationManager.Instance;
         SetProperties();
 
         if (currentLevel >= unlockLevel)
@@ -165,6 +167,7 @@ public abstract class SewingMachineBase : MonoBehaviour
         PlayProduceParticle();
         yield return new WaitForSeconds(delay);
         machineRope.StopAnims();
+        vibration.LightVibration();
     }
 
     protected void StartProduce()

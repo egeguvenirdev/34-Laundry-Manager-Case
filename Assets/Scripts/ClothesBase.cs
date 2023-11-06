@@ -165,10 +165,10 @@ public class ClothesBase : MonoBehaviour
         {
             wobbleMat.SetColor("_SideColor", value);
             wobbleMat.SetColor("_TopColor", value);
-            vibration.SoftVibration();
         });
 
         yield return new WaitForSeconds(duration);
+        vibration.LightVibration();
         transform.parent = null;
         transform.DOMoveY(transform.position.y + 0.2f, 0.5f);
         painted = true;

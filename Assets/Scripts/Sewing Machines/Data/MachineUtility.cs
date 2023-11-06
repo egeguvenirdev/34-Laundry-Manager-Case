@@ -10,7 +10,7 @@ public static class MachineUtility
     {
         {
             ClothType.Sock,
-            new MachineConfig(1f, 1, 0f)
+            new MachineConfig(10f, 1, 0f)
         },
         {
             ClothType.Bra,
