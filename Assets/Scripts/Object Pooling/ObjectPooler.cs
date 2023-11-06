@@ -9,11 +9,13 @@ public class ObjectPooler : MonoSingleton<ObjectPooler>
     [SerializeField] private List<ObjectPooledItem> clothesToPool;
     [SerializeField] private List<ObjectPooledItem> slideTextToPool;
     [SerializeField] private List<ObjectPooledItem> threadsToPool;
+    [SerializeField] private List<ObjectPooledItem> moneyToPool;
 
     [Header("Holder")]
     [SerializeField] private GameObject pooledObjectHolder;
 
     private List<ClothesBase> pooledClothes;
+    private List<MoneyObject> pooledMoneys;
     private List<Thread> pooledThreads;
     private List<SlideText> pooledText;
 
@@ -56,6 +58,18 @@ public class ObjectPooler : MonoSingleton<ObjectPooler>
                 obj.transform.SetParent(pooledObjectHolder.transform);
                 obj.SetActive(false);
                 pooledThreads.Add(obj.GetComponent<Thread>());
+            }
+        }
+
+        pooledMoneys = new List<MoneyObject>();
+        foreach (ObjectPooledItem item in moneyToPool)
+        {
+            for (int i = 0; i < item.amountToPool; i++)
+            {
+                GameObject obj = (GameObject)Instantiate(item.objectToPool);
+                obj.transform.SetParent(pooledObjectHolder.transform);
+                obj.SetActive(false);
+                pooledMoneys.Add(obj.GetComponent<MoneyObject>());
             }
         }
     }
@@ -110,6 +124,31 @@ public class ObjectPooler : MonoSingleton<ObjectPooler>
                 pooledThreads.Add(newThread);
                 obj.transform.SetParent(pooledObjectHolder.transform);
                 return newThread;
+            }
+        }
+        return null;
+    }
+
+    public MoneyObject GetPooledMoney()
+    {
+        for (int i = pooledMoneys.Count - 1; i > -1; i--)
+        {
+            if (!pooledMoneys[i].gameObject.activeInHierarchy)
+            {
+                return pooledMoneys[i];
+            }
+        }
+        //pooledObjects.First(o => o.activeInHierarchy && o.tag == tag);
+        foreach (ObjectPooledItem item in moneyToPool)
+        {
+            if (item.shouldExpand)
+            {
+                GameObject obj = (GameObject)Instantiate(item.objectToPool);
+                obj.SetActive(false);
+                MoneyObject newMoney = obj.GetComponent<MoneyObject>();
+                pooledMoneys.Add(newMoney);
+                obj.transform.SetParent(pooledObjectHolder.transform);
+                return newMoney;
             }
         }
         return null;

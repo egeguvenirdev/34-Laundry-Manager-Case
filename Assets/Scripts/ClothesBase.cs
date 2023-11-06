@@ -32,6 +32,7 @@ public class ClothesBase : MonoBehaviour
     private StageSwapperButton swapButton;
     private VibrationManager vibration;
     private ClothesUIManager clothesUIManager;
+    private ObjectPooler pooler;
     private Camera cam;
     private float currentValue;
 
@@ -55,6 +56,7 @@ public class ClothesBase : MonoBehaviour
         clothesUIManager = FindObjectOfType<ClothesUIManager>();
         cam = Camera.main;
         vibration = VibrationManager.Instance;
+        pooler = ObjectPooler.Instance;
         vibration.SoftVibration();
         swapButton = FindObjectOfType<StageSwapperButton>();
         colorType = ColorType.nullColor;
@@ -191,32 +193,36 @@ public class ClothesBase : MonoBehaviour
 
     private void InstaSell(Transform targetTransform)
     {
-        Vector3 target = targetTransform.position;
-        target.z = (transform.position - cam.transform.position).z;
-        Vector3 result = cam.ScreenToWorldPoint(target);
+        ActionManager.GainRope?.Invoke();
 
-        transform.DOMove(result, 0.75f).OnComplete(() =>
-        {
-            ActionManager.GainRope?.Invoke();
-            sprite.gameObject.SetActive(true);
-            ActionManager.UpdateMoney?.Invoke(money);
-            DeInit();
-        });
+        MoneyObject moneyObj = pooler.GetPooledMoney();
+        moneyObj.transform.position = transform.position;
+        moneyObj.gameObject.SetActive(true);
+        moneyObj.GoToUi(money);
+
+        sprite.gameObject.SetActive(true);
+        col.enabled = true;
+        DeInit();
     }
 
     private void UiToSell(Transform targetTransform)
     {
+        ActionManager.GainRope?.Invoke();
+
         Vector3 target = targetTransform.position;
         target.z = (transform.position - cam.transform.position).z;
         Vector3 result = cam.ScreenToWorldPoint(target);
 
         transform.DOMove(result, 0.75f).OnComplete(() =>
         {
-            ActionManager.GainRope?.Invoke();
+            MoneyObject moneyObj = pooler.GetPooledMoney();
+            moneyObj.transform.position = transform.position;
+            moneyObj.gameObject.SetActive(true);
+            moneyObj.GoToUi(money);
+
             sprite.gameObject.SetActive(true);
             col.enabled = true;
             targetTransform.gameObject.SetActive(false);
-            ActionManager.UpdateMoney?.Invoke(money);
             DeInit();
         });
     }

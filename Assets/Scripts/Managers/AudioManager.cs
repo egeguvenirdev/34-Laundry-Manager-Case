@@ -18,7 +18,6 @@ public class AudioManager : MonoBehaviour
 
     private void OnPlaySound(AudioClip clip)
     {
-        Debug.Log(clip);
         source.PlayOneShot(clip);
     }
 }
